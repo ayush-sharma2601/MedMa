@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import com.example.radyapp.R;
 
+import com.example.radyapp.R;
+
 public class MainActivity extends AppCompatActivity {
 
 
