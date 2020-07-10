@@ -1,8 +1,10 @@
-package com.example.radyapp;
+package com.example.radyapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.radyapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
