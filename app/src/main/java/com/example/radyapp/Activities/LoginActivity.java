@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     void loadFragment(Fragment fragment)
     {
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.,fragment);
+        fragmentTransaction.replace(R.id.login_frame_layout,fragment);
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commit();
 

@@ -6,4 +6,5 @@
     <color name="grad_mid">#3F8C88</color>
     <color name="grad_end">#7CDD9D</color>
     <color name="btn_back">#006B65</color>
+    <color name="white">#FFFFFF</color>
 </resources>

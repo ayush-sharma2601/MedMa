@@ -36,11 +36,11 @@ public class SignupFragment extends Fragment {
 
     }
 
-    private void loadFragment(Fragment fragment)
-    {
-        FragmentTransaction fragmentTransaction=getFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.,fragment);//Replace framelayout with the fragment
-        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        fragmentTransaction.commit();
-    }
+//    private void loadFragment(Fragment fragment)
+//    {
+//        FragmentTransaction fragmentTransaction=getFragmentManager().beginTransaction();
+//        fragmentTransaction.replace(R.id.,fragment);//Replace framelayout with the fragment
+//        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+//        fragmentTransaction.commit();
+//    }
 }
