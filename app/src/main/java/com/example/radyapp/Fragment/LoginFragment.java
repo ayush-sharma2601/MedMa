@@ -36,12 +36,13 @@ public class LoginFragment extends Fragment {
 
     private void attachId() {
 
+
     }
 
     private void loadFragment(Fragment fragment)
     {
         FragmentTransaction fragmentTransaction=getFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.,fragment);//Replace framelayout with the fragment
+        fragmentTransaction.replace(R.id.login_frame_layout,fragment);//Replace framelayout with the fragment
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commit();
     }
