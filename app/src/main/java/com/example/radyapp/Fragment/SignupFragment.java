@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.FloatRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -13,7 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.radyapp.R;
 
-public class LoginFragment extends Fragment {
+public class SignupFragment extends Fragment {
 
     View view;
 
@@ -26,10 +25,9 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        view=inflater.inflate(R.layout.fragment_login,container,false);
+        view=inflater.inflate(R.layout.fragment_signup,container,false);
 
         attachId();
-
 
         return view;
     }
