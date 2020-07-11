@@ -11,20 +11,27 @@ import com.example.radyapp.R;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private static LoginActivity instance;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        instance=this;
 
         loadFragment(new LoginFragment());
     }
 
-    void loadFragment(Fragment fragment)
+    public void loadFragment(Fragment fragment)
     {
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.login_frame_layout,fragment);
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commit();
 
+    }
+
+    public static LoginActivity getInstance(){
+        return instance;
     }
 }

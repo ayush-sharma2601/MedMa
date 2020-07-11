@@ -27,6 +27,8 @@ public class SignupFragment extends Fragment {
     TextView loginIntent;
     TextInputEditText emailET,passswordET,confirmPasswordET;
 
+    public SignupFragment() {
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
