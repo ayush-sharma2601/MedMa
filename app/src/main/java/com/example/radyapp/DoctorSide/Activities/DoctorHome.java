@@ -44,17 +44,20 @@ public class DoctorHome extends AppCompatActivity {
         bottomNavigationView.setOnTabSelectListener(new AnimatedBottomBar.OnTabSelectListener() {
             @Override
             public void onTabSelected(int i, @Nullable AnimatedBottomBar.Tab tab, int i1, @NotNull AnimatedBottomBar.Tab tab1) {
-                switch (tab.getId()){
+                switch (tab1.getId()){
                     case R.id.doctor_schedule:{
                         loadFragment(new DoctorScheduleFragment());
                         Toast.makeText(DoctorHome.this,"0",Toast.LENGTH_SHORT).show();
+                        break;
                     }
                     case R.id.doctor_inventory:{
                         loadFragment(new DoctorInventoryFragment());
                         Toast.makeText(DoctorHome.this,"1",Toast.LENGTH_SHORT).show();
+                        break;
                     }
                     case R.id.doctor_summon:{
                         Toast.makeText(DoctorHome.this,"2",Toast.LENGTH_SHORT).show();
+                        break;
 
                     }
                 }
@@ -62,14 +65,20 @@ public class DoctorHome extends AppCompatActivity {
 
             @Override
             public void onTabReselected(int i, @NotNull AnimatedBottomBar.Tab tab) {
-                switch (i){
-                    case 0:{
+                switch (tab.getId()){
+                    case R.id.doctor_schedule:{
                         loadFragment(new DoctorScheduleFragment());
+                        Toast.makeText(DoctorHome.this,"0",Toast.LENGTH_SHORT).show();
+                        break;
                     }
-                    case 1:{
+                    case R.id.doctor_inventory:{
                         loadFragment(new DoctorInventoryFragment());
+                        Toast.makeText(DoctorHome.this,"1",Toast.LENGTH_SHORT).show();
+                        break;
                     }
-                    case 2:{
+                    case R.id.doctor_summon:{
+                        Toast.makeText(DoctorHome.this,"2",Toast.LENGTH_SHORT).show();
+                        break;
 
                     }
                 }
