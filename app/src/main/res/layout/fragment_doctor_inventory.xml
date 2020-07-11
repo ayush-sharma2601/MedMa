@@ -9,9 +9,15 @@
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:queryHint="Search for medicines"
         android:backgroundTint="@color/colorPrimary"
         android:layout_margin="8dp"
         android:id="@+id/medicine_search"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/medicine_search"
+        android:id="@+id/med_RV"/>
 
 </RelativeLayout>

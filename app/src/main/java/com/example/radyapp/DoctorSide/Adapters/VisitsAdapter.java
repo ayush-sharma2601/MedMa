@@ -63,7 +63,7 @@ public class VisitsAdapter extends RecyclerView.Adapter<VisitsAdapter.VisitsAdap
     public class VisitsAdapterRvVH extends RecyclerView.ViewHolder
     {
         TextView visitingPatientName,visitingPatientTime,visitingPatientRoom;
-        TextView
+
 
         public VisitsAdapterRvVH(@NonNull View itemView) {
             super(itemView);
