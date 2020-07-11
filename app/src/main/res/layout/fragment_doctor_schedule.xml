@@ -36,6 +36,13 @@
                         android:id="@+id/doctor_visits_tab"
                         android:text="Visits"
                         />
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/doctor_references_tab"
+                        android:text="References"
+                        />
+
 
                 </com.google.android.material.tabs.TabLayout>
             </LinearLayout>

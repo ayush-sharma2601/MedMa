@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.radyapp.DoctorSide.Fragments.DoctorAppointmentFragment;
+import com.example.radyapp.DoctorSide.Fragments.DoctorReferenceFragment;
 import com.example.radyapp.DoctorSide.Fragments.DoctorVisitsFragment;
 
 public class HomePageAdapter extends FragmentPagerAdapter {
@@ -34,6 +35,9 @@ public class HomePageAdapter extends FragmentPagerAdapter {
             case 1: {
                 return new DoctorVisitsFragment();
             }
+
+            case 2:
+                return new DoctorReferenceFragment();
             default:return null;
         }
 

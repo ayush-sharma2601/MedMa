@@ -56,6 +56,9 @@ public class DoctorScheduleFragment extends Fragment {
                     case 1: fragment=new DoctorVisitsFragment();
                         loadFragment(fragment);
                         break;
+                    case 2: fragment=new DoctorReferenceFragment();
+                        loadFragment(fragment);
+                        break;
 
 
                 }
