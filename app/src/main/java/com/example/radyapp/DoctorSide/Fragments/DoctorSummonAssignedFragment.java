@@ -7,10 +7,13 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.radyapp.DoctorSide.Adapters.AppointmentsAdapter;
 import com.example.radyapp.DoctorSide.Adapters.SummonAdapter;
+import com.example.radyapp.DoctorSide.ResponseModels.AssignedModel;
+import com.example.radyapp.DoctorSide.ResponseModels.AvailableModel;
 import com.example.radyapp.DoctorSide.ResponseModels.DocAppointmentModel;
 import com.example.radyapp.DoctorSide.ResponseModels.TextModel;
 import com.example.radyapp.R;
@@ -22,8 +25,8 @@ public class DoctorSummonAssignedFragment extends Fragment {
     View view;
     RecyclerView assignedRv;
     SummonAdapter assignedAdapter;
-//    ArrayList<DocAppointmentModel> docAppointmentModels;
-//    ArrayList<TextModel> doctorModels;
+    ArrayList<AssignedModel> assignedModels;
+    ArrayList<AvailableModel> availableModels;
 
 
     public DoctorSummonAssignedFragment() {
@@ -64,21 +67,28 @@ public class DoctorSummonAssignedFragment extends Fragment {
     }
 
     private void attachLayout() {
+        assignedRv.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL,false));
     }
 
     private void initArrarList() {
+        assignedModels=new ArrayList<>(3);
     }
 
     private void addData() {
+        for (int i=0;i<10;i++)
+            assignedModels.add(new AssignedModel("Paritosh Varshney","Head Female Nurse","Dr. Boora","1 hr"));
     }
 
     private void initAdapter() {
+        assignedAdapter=new SummonAdapter(assignedModels,availableModels,1);
     }
 
     private void attachAdapter() {
+        assignedRv.setAdapter(assignedAdapter);
     }
 
     private void refreshAdapter() {
+        assignedAdapter.notifyDataSetChanged();
     }
 
 }

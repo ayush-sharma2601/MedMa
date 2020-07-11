@@ -31,11 +31,11 @@ public class SummonAdapter extends RecyclerView.Adapter<SummonAdapter.SummonAdap
     public SummonAdapterRvVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (code==0)
         {
-            return new SummonAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout,parent,false));
+            return new SummonAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.available_model_rv_layout,parent,false));
         }
         else
         {
-            return new SummonAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout,parent,false));
+            return new SummonAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.assigned_model_rv_layout,parent,false));
         }
 
     }
@@ -73,12 +73,35 @@ public class SummonAdapter extends RecyclerView.Adapter<SummonAdapter.SummonAdap
 
         public SummonAdapterRvVH(@NonNull View itemView) {
             super(itemView);
+
+            if (code==0)
+            {
+                availableName=itemView.findViewById(R.id.available_nurse_name);
+                availablePost=itemView.findViewById(R.id.available_nurse_post);
+            }
+
+            else
+            {
+                assignedName=itemView.findViewById(R.id.nurse_name);
+                assignedPost=itemView.findViewById(R.id.nurse_post);
+                assignedDoctor=itemView.findViewById(R.id.nurse_doctor);
+                assignedTimeElapsed=itemView.findViewById(R.id.time_elapsed);
+            }
         }
 
         public void populateAvailable(AvailableModel availableModel) {
+
+            availableName.setText(availableModel.getName());
+            availablePost.setText(availableModel.getPost());
+
         }
 
         public void populateAssigned(AssignedModel assignedModel) {
+
+            assignedName.setText(assignedModel.getName());
+            assignedPost.setText(assignedModel.getPost());
+            assignedDoctor.setText(assignedModel.getDoctorAssigned());
+            assignedTimeElapsed.setText(assignedModel.getTimeElapsed());
         }
     }
 }

@@ -7,9 +7,12 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.radyapp.DoctorSide.Adapters.SummonAdapter;
+import com.example.radyapp.DoctorSide.ResponseModels.AssignedModel;
+import com.example.radyapp.DoctorSide.ResponseModels.AvailableModel;
 import com.example.radyapp.DoctorSide.ResponseModels.DocAppointmentModel;
 import com.example.radyapp.DoctorSide.ResponseModels.TextModel;
 import com.example.radyapp.R;
@@ -21,8 +24,8 @@ public class DoctorSummonAvailableFragment extends Fragment {
     View view;
     RecyclerView availableRv;
     SummonAdapter availableAdapter;
-    ArrayList<DocAppointmentModel> docAppointmentModels;
-    ArrayList<TextModel> doctorModels;
+    ArrayList<AssignedModel> assignedModels;
+    ArrayList<AvailableModel> availableModels;
 
     public DoctorSummonAvailableFragment() {
         // Required empty public constructor
@@ -62,21 +65,28 @@ public class DoctorSummonAvailableFragment extends Fragment {
     }
 
     private void attachLayout() {
+        availableRv.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL,false));
     }
 
     private void initArrarList() {
+        availableModels=new ArrayList<>(3);
     }
 
     private void addData() {
+        for (int i=0;i<10;i++)
+            availableModels.add(new AvailableModel("Paritosh Varshney","Head Female Nurse"));
     }
 
     private void initAdapter() {
+        availableAdapter=new SummonAdapter(assignedModels,availableModels,0);
     }
 
     private void attachAdapter() {
+        availableRv.setAdapter(availableAdapter);
     }
 
     private void refreshAdapter() {
+        availableAdapter.notifyDataSetChanged();
     }
 
 }
