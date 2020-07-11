@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,6 +22,7 @@ public class PatientLoginFragment extends Fragment {
     View view;
     Button loginButton;
     TextView registerButton;
+    EditText patientUsername,patientPassword;
 
     public PatientLoginFragment() {
     }
@@ -38,20 +40,35 @@ public class PatientLoginFragment extends Fragment {
 
         attachId();
 
+
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mainIntent=new Intent(view.getContext(), DoctorHome.class);
-                startActivity(mainIntent);
+
+                if (patientUsername.getText().toString().trim().equals(""))
+                {
+                    patientUsername.setError("Field Empty");
+                    patientUsername.requestFocus();
+                }
+
+                if (patientPassword.getText().toString().trim().equals(""))
+                {
+                    patientPassword.setError("Field Empty");
+                    patientPassword.requestFocus();
+                }
+
+                if (patientPassword.getError()==null&&patientUsername.getError()==null) {
+                    Intent mainIntent = new Intent(view.getContext(), DoctorHome.class);
+                    startActivity(mainIntent);
+                }
             }
         });
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 LoginActivity.getInstance().loadFragment(new SignupFragment());
-
             }
         });
 
@@ -61,6 +78,8 @@ public class PatientLoginFragment extends Fragment {
     private void attachId() {
         loginButton=view.findViewById(R.id.fragment_patient_login_button);
         registerButton=view.findViewById(R.id.fragment_patient_login_register_button);
+        patientUsername=view.findViewById(R.id.fragment_login_patient_email_et);
+        patientPassword=view.findViewById(R.id.fragment_patient_login_password_et);
     }
 }
 
