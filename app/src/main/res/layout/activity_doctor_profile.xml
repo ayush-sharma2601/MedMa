@@ -16,9 +16,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/ic_user"
+            android:src="@drawable/ic_chevron_left_black_24dp"
             android:id="@+id/doctor_profile_back_btn"/>
 
         <TextView
