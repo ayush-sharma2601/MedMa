@@ -78,7 +78,7 @@ public class DoctorInventoryFragment extends Fragment {
     }
 
     private void initAdapter() {
-        medADapter =new InventoryAdapter(meds);
+        medADapter =new InventoryAdapter(meds,0);
     }
 
     private void attachId() {
