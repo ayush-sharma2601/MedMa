@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,10 +21,11 @@ import java.util.ArrayList;
 public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.InventtoryAdapterRVVH> {
 
     ArrayList<MedModel> medicineModels;
+    int code;
 
-
-    public InventoryAdapter(ArrayList<MedModel> medicineModels) {
+    public InventoryAdapter(ArrayList<MedModel> medicineModels,int code) {
         this.medicineModels = medicineModels;
+        this.code =code;
     }
 
     @NonNull
@@ -61,12 +63,15 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Inve
             medName.setText(med.getMedName());
             medStock.setText(Integer.toString(med.getStock()));
 
-            itemView.setOnClickListener(new View.OnClickListener() {
+            if(code==1)
+            {
+                itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Toast.makeText(itemView.getContext(),"selected",Toast.LENGTH_LONG).show();
                 }
-            });
+                 });
+            }
         }
     }
 }
