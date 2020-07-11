@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorSide.Activities.DoctorRefer">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back_button"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_chevron_left_black_24dp"
+        android:layout_marginHorizontal="5dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/doctor_refer_list_rv"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/back_button"
+        />
+
+</RelativeLayout>

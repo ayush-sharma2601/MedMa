@@ -5,12 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.radyapp.DoctorSide.Adapters.AppointmentsAdapter;
 import com.example.radyapp.DoctorSide.ResponseModels.DocAppointmentModel;
+import com.example.radyapp.DoctorSide.ResponseModels.TextModel;
 import com.example.radyapp.R;
 
 import java.util.ArrayList;
@@ -21,11 +23,16 @@ public class DoctorAppointmentFragment extends Fragment {
     RecyclerView appointmentsRv;
     AppointmentsAdapter appointmentsAdapter;
     ArrayList<DocAppointmentModel> docAppointmentModels;
+    ArrayList<TextModel> doctorModels;
 
     public DoctorAppointmentFragment() {
         // Required empty public constructor
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,17 +48,24 @@ public class DoctorAppointmentFragment extends Fragment {
 
         addData();
 
-
         initAdapter();
 
+        attachAdapter();
+
         refreshAdapter();
+
         return view;
 
     }
 
+    private void attachAdapter() {
+
+        appointmentsRv.setAdapter(appointmentsAdapter);
+    }
+
     private void addData() {
         for (int i=0;i<10;i++)
-        docAppointmentModels.add(new DocAppointmentModel("Rishabh","Mareez ka to mazak mat udao"));
+        docAppointmentModels.add(new DocAppointmentModel("Rishabh","11:15 am"));
     }
 
     private void refreshAdapter() {
@@ -69,7 +83,7 @@ public class DoctorAppointmentFragment extends Fragment {
     }
 
     private void initAdapter() {
-        appointmentsAdapter =new AppointmentsAdapter(docAppointmentModels);
+        appointmentsAdapter =new AppointmentsAdapter(docAppointmentModels,doctorModels,0);
     }
 
     private void attachId() {
