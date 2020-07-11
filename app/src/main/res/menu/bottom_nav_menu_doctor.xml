@@ -5,17 +5,17 @@
     <item
         android:id="@+id/doctor_schedule"
         android:title="schedule"
-        android:icon="@drawable/ic_user"
+        android:icon="@drawable/ic_schedule"
         />
     <item
         android:title="inventory"
         android:id="@+id/doctor_inventory"
-        android:icon="@drawable/ic_user"
+        android:icon="@drawable/ic_medicine"
     />
 
     <item
         android:title="summons"
         android:id="@+id/doctor_summon"
-        android:icon="@drawable/ic_user"
+        android:icon="@drawable/ic_nurse"
         />
 </menu>

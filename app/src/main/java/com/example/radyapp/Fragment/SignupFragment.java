@@ -35,7 +35,7 @@ public class SignupFragment extends Fragment {
     EditText firstNameET,pinET,addressET,genderET,dobET;
     Button registerBtn;
     TextView loginIntent;
-    TextInputEditText emailET,passswordET,confirmPasswordET,phoneNumberET;
+    EditText emailET,passswordET,confirmPasswordET,phoneNumberET;
 
     public SignupFragment() {
     }

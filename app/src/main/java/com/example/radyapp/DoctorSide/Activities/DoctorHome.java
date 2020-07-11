@@ -6,6 +6,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -104,9 +105,15 @@ public class DoctorHome extends AppCompatActivity {
 
 
     public void DoctorProfile(MenuItem item) {
+        Intent intent1 = new Intent(DoctorHome.this,DoctorProfile.class);
+        startActivity(intent1);
+        drawerLayout.closeDrawer(Gravity.LEFT);
     }
 
     public void DoctorNotices(MenuItem item) {
+        Intent intent = new Intent(DoctorHome.this,DoctorNotices.class);
+        startActivity(intent);
+        drawerLayout.closeDrawer(Gravity.LEFT);
     }
 
     public void DoctorLogout(MenuItem item) {

@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DoctorSide.Activities.DoctorRefer"></activity>
+        <activity android:name=".DoctorSide.Activities.DoctorProfile"></activity>
         <activity android:name=".DoctorSide.Activities.DoctorNotices" />
         <activity android:name=".DoctorSide.Activities.DoctorAppointmentInternal" />
         <activity android:name=".DoctorSide.Activities.DoctorHome" />

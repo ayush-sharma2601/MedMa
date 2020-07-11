@@ -24,6 +24,30 @@
                     android:layout_margin="15dp"
                     android:src="@drawable/ic_menu"
                     android:id="@+id/menu_btn"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="20dp"
+                    android:elevation="0dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/profile_photo_doc"
+                        android:elevation="4dp"
+                        android:scaleType="fitXY"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="AS"
+                        android:id="@+id/profile_text_doc"/>
+
+                </androidx.cardview.widget.CardView>
             </RelativeLayout>
         </com.google.android.material.appbar.AppBarLayout>
         <FrameLayout
@@ -48,6 +72,7 @@
             app:abb_selectedTabType="text"
             app:abb_indicatorAppearance="round"
             app:abb_indicatorMargin="16dp"
+            android:elevation="8dp"
             app:abb_indicatorHeight="4dp"
             android:layout_alignParentBottom="true"
             app:abb_tabs="@menu/bottom_nav_menu_doctor"
