@@ -10,10 +10,10 @@ import androidx.fragment.app.Fragment;
 import com.example.radyapp.R;
 
 
-public class DoctorInventoryFragment extends Fragment {
+public class DoctorSummonFragment extends Fragment {
         View view;
 
-    public DoctorInventoryFragment() {
+    public DoctorSummonFragment() {
         // Required empty public constructor
     }
 
@@ -22,7 +22,7 @@ public class DoctorInventoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_doctor_inventory, container, false);
+        view = inflater.inflate(R.layout.fragment_doctor_summon, container, false);
         return view;
 
     }

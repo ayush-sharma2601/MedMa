@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+ >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
@@ -10,9 +17,8 @@
         android:text="LOGIN"
         android:textColor="@color/white"
         android:fontFamily="@font/ubuntu_medium"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:id="@+id/fragment_staff_login_header"
-        android:layout_marginTop="46dp"
         android:layout_marginStart="40dp"
         />
 
@@ -22,14 +28,14 @@
         android:id="@+id/fragment_staff_login_image"
         android:layout_below="@id/fragment_staff_login_header"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:src="@drawable/ic_logo"
         />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginHorizontal="50dp"
         app:hintTextColor="#00228A90"
         android:layout_below="@id/fragment_staff_login_image"
@@ -54,7 +60,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="50dp"
         app:passwordToggleEnabled="true"
         android:layout_below="@id/fragment_staff_login_email_et_container"
@@ -85,7 +91,7 @@
         android:textColor="@color/white"
         android:fontFamily="@font/ubuntu_medium"
         android:layout_below="@id/fragment_staff_login_password_et_container"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_back"
         android:paddingHorizontal="30dp"
@@ -96,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@id/fragment_staff_login_button"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal">
@@ -119,3 +125,4 @@
     </LinearLayout>
 
 </RelativeLayout>
+</LinearLayout>

@@ -1,10 +1,4 @@
-package com.example.radyapp.DoctorSide.Activities;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
+package com.example.radyapp.PatientSide;
 
 import android.os.Bundle;
 import android.view.Gravity;
@@ -14,18 +8,21 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.example.radyapp.DoctorSide.Fragments.DoctorInventoryFragment;
 import com.example.radyapp.DoctorSide.Fragments.DoctorScheduleFragment;
-import com.example.radyapp.DoctorSide.Fragments.DoctorSummonFragment;
 import com.example.radyapp.R;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import nl.joery.animatedbottombar.AnimatedBottomBar;
 
-public class DoctorHome extends AppCompatActivity {
+public class PatientHome extends AppCompatActivity {
 
 
     DrawerLayout drawerLayout;
@@ -36,7 +33,7 @@ public class DoctorHome extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doctor_home);
+        setContentView(R.layout.activity_patient_home);
         attachID();
 
         loadFragment(new DoctorScheduleFragment());
@@ -48,17 +45,16 @@ public class DoctorHome extends AppCompatActivity {
                 switch (tab1.getId()){
                     case R.id.doctor_schedule:{
                         loadFragment(new DoctorScheduleFragment());
-//                        Toast.makeText(DoctorHome.this,"0",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PatientHome.this,"0",Toast.LENGTH_SHORT).show();
                         break;
                     }
                     case R.id.doctor_inventory:{
                         loadFragment(new DoctorInventoryFragment());
-//                        Toast.makeText(DoctorHome.this,"1",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PatientHome.this,"1",Toast.LENGTH_SHORT).show();
                         break;
                     }
                     case R.id.doctor_summon:{
-                        loadFragment(new DoctorSummonFragment());
-//                        Toast.makeText(DoctorHome.this,"2",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PatientHome.this,"2",Toast.LENGTH_SHORT).show();
                         break;
 
                     }
@@ -70,16 +66,16 @@ public class DoctorHome extends AppCompatActivity {
                 switch (tab.getId()){
                     case R.id.doctor_schedule:{
                         loadFragment(new DoctorScheduleFragment());
-                        Toast.makeText(DoctorHome.this,"0",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PatientHome.this,"0",Toast.LENGTH_SHORT).show();
                         break;
                     }
                     case R.id.doctor_inventory:{
                         loadFragment(new DoctorInventoryFragment());
-                        Toast.makeText(DoctorHome.this,"1",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PatientHome.this,"1",Toast.LENGTH_SHORT).show();
                         break;
                     }
                     case R.id.doctor_summon:{
-                        Toast.makeText(DoctorHome.this,"2",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PatientHome.this,"2",Toast.LENGTH_SHORT).show();
                         break;
 
                     }
