@@ -81,7 +81,6 @@ public class DoctorScheduleFragment extends Fragment {
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
-
         return view;
 
     }
