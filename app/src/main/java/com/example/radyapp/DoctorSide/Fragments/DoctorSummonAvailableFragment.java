@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.radyapp.DoctorSide.Adapters.AppointmentsAdapter;
+import com.example.radyapp.DoctorSide.Adapters.SummonAdapter;
 import com.example.radyapp.DoctorSide.ResponseModels.DocAppointmentModel;
 import com.example.radyapp.DoctorSide.ResponseModels.TextModel;
 import com.example.radyapp.R;
@@ -19,8 +19,8 @@ import java.util.ArrayList;
 public class DoctorSummonAvailableFragment extends Fragment {
 
     View view;
-    RecyclerView appointmentsRv;
-    AppointmentsAdapter appointmentsAdapter;
+    RecyclerView availableRv;
+    SummonAdapter availableAdapter;
     ArrayList<DocAppointmentModel> docAppointmentModels;
     ArrayList<TextModel> doctorModels;
 
@@ -58,6 +58,7 @@ public class DoctorSummonAvailableFragment extends Fragment {
     }
 
     private void attachId() {
+        availableRv=view.findViewById(R.id.doctor_summon_available_rv);
     }
 
     private void attachLayout() {

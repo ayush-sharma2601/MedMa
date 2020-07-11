@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.radyapp.DoctorSide.Adapters.AppointmentsAdapter;
+import com.example.radyapp.DoctorSide.Adapters.SummonAdapter;
 import com.example.radyapp.DoctorSide.ResponseModels.DocAppointmentModel;
 import com.example.radyapp.DoctorSide.ResponseModels.TextModel;
 import com.example.radyapp.R;
@@ -19,10 +20,11 @@ import java.util.ArrayList;
 public class DoctorSummonAssignedFragment extends Fragment {
 
     View view;
-    RecyclerView appointmentsRv;
-    AppointmentsAdapter appointmentsAdapter;
-    ArrayList<DocAppointmentModel> docAppointmentModels;
-    ArrayList<TextModel> doctorModels;
+    RecyclerView assignedRv;
+    SummonAdapter assignedAdapter;
+//    ArrayList<DocAppointmentModel> docAppointmentModels;
+//    ArrayList<TextModel> doctorModels;
+
 
     public DoctorSummonAssignedFragment() {
         // Required empty public constructor
@@ -58,6 +60,7 @@ public class DoctorSummonAssignedFragment extends Fragment {
     }
 
     private void attachId() {
+        assignedRv=view.findViewById(R.id.doctor_summon_assigned_rv);
     }
 
     private void attachLayout() {
