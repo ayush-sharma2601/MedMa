@@ -80,6 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            app:hintTextColor="#00228A90"
             app:startIconDrawable="@drawable/ic_user"
             >
             <com.google.android.material.textfield.TextInputEditText
@@ -97,6 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_weight="1"
+            app:hintTextColor="#00228A90"
             app:passwordToggleEnabled="true"
             app:startIconDrawable="@drawable/ic_password"
             >
@@ -115,6 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginTop="15dp"
+            app:hintTextColor="#00228A90"
             app:passwordToggleEnabled="true"
             app:startIconDrawable="@drawable/ic_password"
             >

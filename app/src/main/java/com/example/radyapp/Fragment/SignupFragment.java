@@ -1,6 +1,7 @@
 package com.example.radyapp.Fragment;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -98,6 +99,7 @@ public class SignupFragment extends Fragment {
         confirmPasswordET = view.findViewById(R.id.register_password_confirm);
         registerBtn = view.findViewById(R.id.register_button);
         loginIntent = view.findViewById(R.id.login_intent_btn);
+        loginIntent.setPaintFlags(loginIntent.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
     }
 
     private void loadFragment(Fragment fragment)
