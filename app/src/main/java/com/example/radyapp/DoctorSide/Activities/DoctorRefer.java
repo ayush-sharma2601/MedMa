@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.radyapp.DoctorSide.Adapters.AppointmentsAdapter;
 import com.example.radyapp.DoctorSide.ResponseModels.DocAppointmentModel;
@@ -19,6 +21,7 @@ public class DoctorRefer extends AppCompatActivity {
     ArrayList<TextModel> doctorModels;
     AppointmentsAdapter doctorAdapter;
     ArrayList<DocAppointmentModel> docAppointmentModels;
+    ImageView backButton;
 
 
     @Override
@@ -27,6 +30,14 @@ public class DoctorRefer extends AppCompatActivity {
         setContentView(R.layout.activity_doctor_refer);
 
         attachId();
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
+            }
+        });
 
         initArrarList();
 
@@ -69,7 +80,7 @@ public class DoctorRefer extends AppCompatActivity {
     }
 
     private void attachId() {
-
+        backButton=findViewById(R.id.back_button);
         doctorReferRv=findViewById(R.id.doctor_refer_list_rv);
     }
 }

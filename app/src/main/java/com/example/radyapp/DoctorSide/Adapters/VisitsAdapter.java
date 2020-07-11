@@ -12,8 +12,6 @@ import com.example.radyapp.DoctorSide.ResponseModels.DoctorReferencesModel;
 import com.example.radyapp.DoctorSide.ResponseModels.DoctorVisitsModel;
 import com.example.radyapp.R;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 public class VisitsAdapter extends RecyclerView.Adapter<VisitsAdapter.VisitsAdapterRvVH> {
@@ -63,7 +61,7 @@ public class VisitsAdapter extends RecyclerView.Adapter<VisitsAdapter.VisitsAdap
     public class VisitsAdapterRvVH extends RecyclerView.ViewHolder
     {
         TextView visitingPatientName,visitingPatientTime,visitingPatientRoom;
-
+        TextView referredPatientName,referredDoctorName,referredTime;
 
         public VisitsAdapterRvVH(@NonNull View itemView) {
             super(itemView);
