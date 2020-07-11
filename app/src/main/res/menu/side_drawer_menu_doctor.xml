@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/doctor_profile"
+        android:title="Profile"
+        android:onClick="DoctorProfile"
+        />
+    <item
+        android:title="Notices"
+        android:id="@+id/drawer_notices"
+        android:onClick="DoctorNotices"
+    />
+
+    <item
+        android:title="Logout"
+        android:id="@+id/doctor_logout"
+        android:onClick="DoctorLogout"
+        />
+</menu>
