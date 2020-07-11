@@ -69,7 +69,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="4"
+        android:weightSum="5"
         android:layout_marginTop="15dp"
         android:id="@+id/detail_container"
         android:gravity="center"
@@ -90,6 +90,25 @@
                 android:hint="Email"
                 android:fontFamily="@font/ubuntu_medium"
                 android:id="@+id/register_email"
+                android:textColor="@color/colorPrimary"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            app:hintTextColor="#00228A90"
+            app:startIconDrawable="@drawable/ic_mobile"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/textview_back"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:fontFamily="@font/ubuntu_medium"
+                android:id="@+id/register_phone"
                 android:textColor="@color/colorPrimary"/>
         </com.google.android.material.textfield.TextInputLayout>
 

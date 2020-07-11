@@ -16,8 +16,18 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.radyapp.DoctorSide.Activities.DoctorHome;
 import com.example.radyapp.R;
+import com.example.radyapp.RetrofitClient;
 import com.google.android.material.textfield.TextInputEditText;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class SignupFragment extends Fragment {
 
@@ -25,7 +35,7 @@ public class SignupFragment extends Fragment {
     EditText firstNameET,lastNameET;
     Button registerBtn;
     TextView loginIntent;
-    TextInputEditText emailET,passswordET,confirmPasswordET;
+    TextInputEditText emailET,passswordET,confirmPasswordET,phoneNumberET;
 
     public SignupFragment() {
     }
@@ -59,6 +69,10 @@ public class SignupFragment extends Fragment {
                 {
                     emailET.setError("Field Empty");
                     emailET.requestFocus();
+                }if(phoneNumberET.getText().toString().trim().equals(""))
+                {
+                    phoneNumberET.setError("Field Empty");
+                    phoneNumberET.requestFocus();
                 }if(passswordET.getText().toString().trim().equals(""))
                 {
                     passswordET.setError("Field Empty");
@@ -74,10 +88,14 @@ public class SignupFragment extends Fragment {
                     confirmPasswordET.requestFocus();
                 }
 
-                if(firstNameET.getError()==null && lastNameET.getError()==null && emailET.getError()==null && passswordET.getError()==null && confirmPasswordET.getError()==null)
+                if(firstNameET.getError()==null && phoneNumberET.getError()==null && lastNameET.getError()==null && emailET.getError()==null && passswordET.getError()==null && confirmPasswordET.getError()==null)
                 {
-                    loadFragment(new LoginFragment());
-                    Toast.makeText(getContext(),"Registered",Toast.LENGTH_LONG).show();
+                    String firstName = firstNameET.getText().toString().trim();
+                    String lastName = lastNameET.getText().toString().trim();
+                    String email = emailET.getText().toString().trim();
+                    String phone = phoneNumberET.getText().toString().trim();
+                    String password = passswordET.getText().toString().trim();
+                    registerUser(firstName,lastName,email,phone,password);
                 }
 
             }
@@ -93,12 +111,36 @@ public class SignupFragment extends Fragment {
         return view;
     }
 
+    private void registerUser(String firstName, String lastName, String email, String phone, String password) {
+        Map<String,String> body = new HashMap<>();
+        body.put("firstName",firstName);
+        body.put("lastName",firstName);
+        body.put("phoneNumber",firstName);
+        body.put("email",firstName);
+        body.put("password",firstName);
+
+        Call<String> call = RetrofitClient.getClient().registerUser(body);
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                Toast.makeText(getContext(),response.body().toString(),Toast.LENGTH_LONG).show();
+                Intent intent =new Intent(getActivity(), DoctorHome.class);
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Toast.makeText(getContext(),"Could not register",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
     private void attachId() {
         firstNameET = view.findViewById(R.id.register_first_name);
         lastNameET = view.findViewById(R.id.register_last_name);
         emailET = view.findViewById(R.id.register_email);
         passswordET = view.findViewById(R.id.register_password);
         confirmPasswordET = view.findViewById(R.id.register_password_confirm);
+        phoneNumberET = view.findViewById(R.id.register_phone);
         registerBtn = view.findViewById(R.id.register_button);
         loginIntent = view.findViewById(R.id.login_intent_btn);
         loginIntent.setPaintFlags(loginIntent.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
