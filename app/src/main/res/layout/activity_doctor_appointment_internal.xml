@@ -123,7 +123,6 @@
                 android:layout_alignBottom="@id/nametv"
                 android:text="Rishabh Singh"
                 android:layout_toRightOf="@id/nametv"
-                android:layout_alignParentEnd=""
                 android:textColor="@color/colorPrimary"
                 android:id="@+id/name"
                 android:layout_marginTop="10dp"

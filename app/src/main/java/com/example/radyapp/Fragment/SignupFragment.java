@@ -32,7 +32,7 @@ import retrofit2.Response;
 public class SignupFragment extends Fragment {
 
     View view;
-    EditText firstNameET,lastNameET;
+    EditText firstNameET,pinET,addressET,genderET,dobET;
     Button registerBtn;
     TextView loginIntent;
     TextInputEditText emailET,passswordET,confirmPasswordET,phoneNumberET;
@@ -61,10 +61,22 @@ public class SignupFragment extends Fragment {
                     firstNameET.setError("Field Empty");
                     firstNameET.requestFocus();
                 }
-                if(lastNameET.getText().toString().trim().equals(""))
+                if(pinET.getText().toString().trim().equals(""))
                 {
-                    lastNameET.setError("Field Empty");
-                    lastNameET.requestFocus();
+                    pinET.setError("Field Empty");
+                    pinET.requestFocus();
+                }if(addressET.getText().toString().trim().equals(""))
+                {
+                    addressET.setError("Field Empty");
+                    addressET.requestFocus();
+                }if(dobET.getText().toString().trim().equals(""))
+                {
+                    dobET.setError("Field Empty");
+                    dobET.requestFocus();
+                }if(genderET.getText().toString().trim().equals(""))
+                {
+                    genderET.setError("Field Empty");
+                    genderET.requestFocus();
                 }if(emailET.getText().toString().trim().equals(""))
                 {
                     emailET.setError("Field Empty");
@@ -88,14 +100,18 @@ public class SignupFragment extends Fragment {
                     confirmPasswordET.requestFocus();
                 }
 
-                if(firstNameET.getError()==null && phoneNumberET.getError()==null && lastNameET.getError()==null && emailET.getError()==null && passswordET.getError()==null && confirmPasswordET.getError()==null)
+                if(addressET.getError()==null && dobET.getError()==null && firstNameET.getError()==null && genderET.getError()==null && phoneNumberET.getError()==null && pinET.getError()==null && emailET.getError()==null && passswordET.getError()==null && confirmPasswordET.getError()==null)
                 {
-                    String firstName = firstNameET.getText().toString().trim();
-                    String lastName = lastNameET.getText().toString().trim();
+                    String fullName = firstNameET.getText().toString().trim();
+                    String address1 = addressET.getText().toString();
+                    String pin = pinET.getText().toString();
+                    String address = address1 + " " + pin;
+                    String gender = genderET.getText().toString().trim();
+                    String dob = dobET.getText().toString();
                     String email = emailET.getText().toString().trim();
                     String phone = phoneNumberET.getText().toString().trim();
                     String password = passswordET.getText().toString().trim();
-                    registerUser(firstName,lastName,email,phone,password);
+                    registerUser(fullName,address,phone,email,password,gender,dob);
                 }
 
             }
@@ -111,13 +127,15 @@ public class SignupFragment extends Fragment {
         return view;
     }
 
-    private void registerUser(String firstName, String lastName, String email, String phone, String password) {
+    private void registerUser(String fullName, String address, String phone, String email, String password, String gender, String dob) {
         Map<String,String> body = new HashMap<>();
-        body.put("firstName",firstName);
-        body.put("lastName",firstName);
-        body.put("phoneNumber",firstName);
-        body.put("email",firstName);
-        body.put("password",firstName);
+        body.put("fullName",fullName);
+        body.put("address",address);
+        body.put("phoneNumber",phone);
+        body.put("email",email);
+        body.put("password",password);
+        body.put("gender",gender);
+        body.put("dateOfBirth",dob);
 
         Call<String> call = RetrofitClient.getClient().registerUser(body);
         call.enqueue(new Callback<String>() {
@@ -136,7 +154,6 @@ public class SignupFragment extends Fragment {
 
     private void attachId() {
         firstNameET = view.findViewById(R.id.register_first_name);
-        lastNameET = view.findViewById(R.id.register_last_name);
         emailET = view.findViewById(R.id.register_email);
         passswordET = view.findViewById(R.id.register_password);
         confirmPasswordET = view.findViewById(R.id.register_password_confirm);
@@ -144,6 +161,10 @@ public class SignupFragment extends Fragment {
         registerBtn = view.findViewById(R.id.register_button);
         loginIntent = view.findViewById(R.id.login_intent_btn);
         loginIntent.setPaintFlags(loginIntent.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        pinET = view.findViewById(R.id.register_pincode);
+        dobET=view.findViewById(R.id.register_dob);
+        addressET =  view.findViewById(R.id.register_address);
+        genderET = view.findViewById(R.id.gender);
     }
 
     private void loadFragment(Fragment fragment)
