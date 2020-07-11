@@ -5,16 +5,13 @@
     <item
         android:id="@+id/profile_home"
         android:title="Profile"
-        android:onClick="openProfile"
         />
     <item
         android:title="Settings"
         android:id="@+id/drawer_bookings"
-        android:onClick="openSettings"
     />
     <item
         android:title="Logout"
         android:id="@+id/drawer_membership"
-        android:onClick="logout"
         />
 </menu>

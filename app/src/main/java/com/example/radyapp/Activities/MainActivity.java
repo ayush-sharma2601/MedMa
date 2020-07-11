@@ -24,14 +24,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        attachID();
+
         menuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                drawerLayout.openDrawer(Gravity.RIGHT);
+                drawerLayout.openDrawer(Gravity.LEFT);
             }
         });
 
-        attachID();
     }
 
     private void attachID() {
