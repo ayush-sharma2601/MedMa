@@ -71,6 +71,7 @@ public class PatientRoutineFragment extends Fragment {
         for (int i=0;i<3;i++)
         {
             patientNotesModels.add(new PatientNotesModel("Dr. Boora","Be a goog boy or Dr. Boora will come :') "));
+            patientPrescriptionModels.add(new PatientPrescriptionModel("Dolomide","500mg","3 times before each meal","Dr. Boora"));
         }
 
     }
