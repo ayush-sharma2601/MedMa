@@ -82,6 +82,7 @@ public class DoctorHome extends AppCompatActivity {
                         break;
                     }
                     case R.id.doctor_summon:{
+                        loadFragment(new DoctorSummonFragment());
                         Toast.makeText(DoctorHome.this,"2",Toast.LENGTH_SHORT).show();
                         break;
 

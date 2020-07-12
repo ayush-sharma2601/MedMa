@@ -66,8 +66,15 @@ public class DoctorVisitsFragment extends Fragment {
     }
 
     private void addData() {
-        for (int i=0;i<10;i++)
-            doctorVisitsModels.add(new DoctorVisitsModel("Rishabh Singh","4:30","330",true));
+
+        doctorVisitsModels.add(new DoctorVisitsModel("Mukund Garg","4:30","Ward E-320",true));
+        doctorVisitsModels.add(new DoctorVisitsModel("Harsh Nigam","5:30","Ward D-160",true));
+        doctorVisitsModels.add(new DoctorVisitsModel("Rishabh Singh","6:30","Ward A-182",true));
+        doctorVisitsModels.add(new DoctorVisitsModel("Ayush Sharma","7:30","Ward E-147",true));
+        doctorVisitsModels.add(new DoctorVisitsModel("Shivansh Bansal","8:30","Ward A-388",true));
+        doctorVisitsModels.add(new DoctorVisitsModel("Ankit Anand","9:30","Ward A-400",true));
+        doctorVisitsModels.add(new DoctorVisitsModel("Akshat Pandit","9:50","Ward E-26",true));
+
     }
 
     private void initAdapter() {

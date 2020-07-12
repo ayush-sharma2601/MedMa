@@ -44,8 +44,18 @@ public class PrescriptionActivity extends AppCompatActivity {
     }
 
     private void addData() {
-        for (int i=0;i<10;i++)
-            meds.add(new MedModel("Zoratol",110));
+        meds.add(new MedModel("Zoratol",110));
+        meds.add(new MedModel("Crocin",500));
+        meds.add(new MedModel("Disprin",250));
+        meds.add(new MedModel("Asithrol",250));
+        meds.add(new MedModel("Paracetamol",500));
+        meds.add(new MedModel("Nimusalide",300));
+        meds.add(new MedModel("Glycomet GP",850));
+        meds.add(new MedModel("Trinicalm",250));
+        meds.add(new MedModel("Clonotril",500));
+        meds.add(new MedModel("Lipitor",250));
+        meds.add(new MedModel("Demerol",500));
+        meds.add(new MedModel("Dexilant",250));
     }
 
     private void refreshAdapter() {

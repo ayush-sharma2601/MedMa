@@ -52,10 +52,12 @@ public class VisitsAdapter extends RecyclerView.Adapter<VisitsAdapter.VisitsAdap
 
     @Override
     public int getItemCount() {
-        if (code==0)
-        return doctorVisitsModels.size();
-        else
+        if (code==0) {
+            return doctorVisitsModels.size();
+        }
+        else {
             return doctorReferencesModels.size();
+        }
     }
 
     public class VisitsAdapterRvVH extends RecyclerView.ViewHolder
@@ -65,12 +67,32 @@ public class VisitsAdapter extends RecyclerView.Adapter<VisitsAdapter.VisitsAdap
 
         public VisitsAdapterRvVH(@NonNull View itemView) {
             super(itemView);
+
+            if(code==0) {
+                visitingPatientName = itemView.findViewById(R.id.name);
+                visitingPatientRoom = itemView.findViewById(R.id.room_no);
+                visitingPatientTime = itemView.findViewById(R.id.time);
+            }
+
+            else
+            {
+                referredPatientName=itemView.findViewById(R.id.name);
+                referredDoctorName=itemView.findViewById(R.id.time);
+                referredTime=itemView.findViewById(R.id.room_no);
+            }
         }
 
         public void populateDoctorReferences(DoctorReferencesModel doctorReferencesModel) {
+
+            referredTime.setText(doctorReferencesModel.getTime());
+            referredDoctorName.setText(doctorReferencesModel.getCurrentDoctorName());
+            referredPatientName.setText(doctorReferencesModel.getPatientName());
         }
 
         public void populateDoctorVisits(DoctorVisitsModel doctorVisitsModel) {
+            visitingPatientTime.setText(doctorVisitsModel.getTime());
+            visitingPatientRoom.setText(doctorVisitsModel.getRoomNo());
+            visitingPatientName.setText(doctorVisitsModel.getPatientName());
         }
     }
 }

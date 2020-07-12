@@ -72,8 +72,15 @@ public class DoctorSummonAssignedFragment extends Fragment {
     }
 
     private void addData() {
-        for (int i=0;i<10;i++)
-            assignedModels.add(new AssignedModel("Paritosh Varshney","Head Female Nurse","Dr. Boora","1 hr"));
+
+        assignedModels.add(new AssignedModel("Shishir Upadhyay","Nurse","Dr. Shashikant Upadhyaya","1 hr"));
+        assignedModels.add(new AssignedModel("Prakhar Mani Tripathi","Nurse","Dr. Masira Siddhiqi","1 hr"));
+        assignedModels.add(new AssignedModel("Subhadeep Bhaudaria","Wardboy","Dr. Shankhyadhar S. Verma","1 hr"));
+        assignedModels.add(new AssignedModel("Saransh Srivastava","Wardboy","Dr. Shubham Rastogi","1 hr"));
+        assignedModels.add(new AssignedModel("Sanskriti Verma","Nurse","Dr. Shirish Shukla","1 hr"));
+        assignedModels.add(new AssignedModel("Deepanjali Chatterjee","Nurse","Dr. Santosh Yadav","1 hr"));
+
+
     }
 
     private void initAdapter() {

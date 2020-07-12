@@ -73,8 +73,15 @@ public class DoctorSummonAvailableFragment extends Fragment {
     }
 
     private void addData() {
-        for (int i=0;i<10;i++)
-            availableModels.add(new AvailableModel("Paritosh Varshney","Head Female Nurse"));
+
+        availableModels.add(new AvailableModel("Paritosh Varshney","Head Male Nurse"));
+        availableModels.add(new AvailableModel("Masira Siddhiqi","Head Female Nurse"));
+        availableModels.add(new AvailableModel("Shreya Sharma","Nurse"));
+        availableModels.add(new AvailableModel("Shranay Swami","Wardboy"));
+        availableModels.add(new AvailableModel("Shishir Upadhyay","Nurse"));
+        availableModels.add(new AvailableModel("Dhananjay Shukla","Nurse"));
+        availableModels.add(new AvailableModel("Abhinav Verma","Wardboy"));
+        availableModels.add(new AvailableModel("Ashish Sharma","Wardboy"));
     }
 
     private void initAdapter() {

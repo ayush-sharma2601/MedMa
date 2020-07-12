@@ -66,8 +66,15 @@ public class DoctorReferenceFragment extends Fragment {
     }
 
     private void addData() {
-        for (int i=0;i<10;i++)
-            doctorReferencesModels.add(new DoctorReferencesModel("Rishabh Singh","5:30","Dr. Ayush Sharma",true,"Dr. DBM"));
+
+        doctorReferencesModels.add(new DoctorReferencesModel("Rishabh Singh","5:30","Dr. Shashikant Upadhyaya",true,"Dr. DBM"));
+        doctorReferencesModels.add(new DoctorReferencesModel("Parth Srivastava","6:15","Dr. Yathartha Swaroop",true,"Dr. DBM"));
+        doctorReferencesModels.add(new DoctorReferencesModel("Shailesh Verma","7:00","Dr. Virendra Singh",true,"Dr. DBM"));
+        doctorReferencesModels.add(new DoctorReferencesModel("Rishika Srivastava","7:30","Dr. Shyamala Srivastava",true,"Dr. DBM"));
+        doctorReferencesModels.add(new DoctorReferencesModel("Saesha Sanghi","8:00","Dr. Shankhyadhar S. Verma",true,"Dr. DBM"));
+        doctorReferencesModels.add(new DoctorReferencesModel("Vividh Pai","8:45","Dr. Santosh Yadav",true,"Dr. DBM"));
+        doctorReferencesModels.add(new DoctorReferencesModel("Shravi Mishra","8:45","Dr. Masira Siddhiqi",true,"Dr. DBM"));
+
     }
 
     private void initAdapter() {

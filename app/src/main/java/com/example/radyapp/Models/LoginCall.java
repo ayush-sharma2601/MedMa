@@ -5,16 +5,16 @@ import com.google.gson.annotations.SerializedName;
 
 public class LoginCall {
 
-    @SerializedName("msg")
     @Expose
+    @SerializedName("msg")
     String msg;
 
-    @SerializedName("success")
     @Expose
+    @SerializedName("success")
     Boolean success;
 
-    @SerializedName("role")
     @Expose
+    @SerializedName("role")
     String role;
 
     public String getRole() {

@@ -58,8 +58,16 @@ public class DoctorRefer extends AppCompatActivity {
     }
 
     private void addData() {
-        for (int i=0;i<10;i++)
-            doctorModels.add(new TextModel("Dr. Boora"));
+        doctorModels.add(new TextModel("Dr. Vishal Boora"));
+        doctorModels.add(new TextModel("Dr. Santosh Yadav"));
+        doctorModels.add(new TextModel("Dr. Masira Siddhiqi"));
+        doctorModels.add(new TextModel("Dr. Shravi Mishra"));
+        doctorModels.add(new TextModel("Dr. Virendra Singh"));
+        doctorModels.add(new TextModel("Dr. Suraj Singh"));
+        doctorModels.add(new TextModel("Dr. Yathartha Swaroop"));
+        doctorModels.add(new TextModel("Dr. Paurush Punyasheel"));
+        doctorModels.add(new TextModel("Dr. Himanshu Singh"));
+        doctorModels.add(new TextModel("Dr. Aniket Sinha"));
     }
 
     private void initAdapter() {

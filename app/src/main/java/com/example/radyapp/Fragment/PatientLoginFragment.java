@@ -81,7 +81,8 @@ public class PatientLoginFragment extends Fragment {
 //                    startActivity(mainIntent);
 
 //                    loginUser(patientUsername.getText().toString().trim(),patientPassword.getText().toString().trim());
-                    Intent intent =new Intent(view.getContext(),PatientHome.class);
+                    Intent intent =new Intent(view.getContext(),DoctorHome.class);
+                    startActivity(intent);
 //                    Intent mainIntent = new Intent(view.getContext(), StaffHome.class);
 //                    startActivity(mainIntent);
                 }
@@ -101,7 +102,6 @@ public class PatientLoginFragment extends Fragment {
     }
 
     private void loginUser(final String username, final String password) {
-
 
 
         Call<LoginCall> call = RetrofitClient.getClient().loginUser(username,password);

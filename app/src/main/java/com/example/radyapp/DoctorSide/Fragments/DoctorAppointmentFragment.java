@@ -64,8 +64,17 @@ public class DoctorAppointmentFragment extends Fragment {
     }
 
     private void addData() {
-        for (int i=0;i<10;i++)
-        docAppointmentModels.add(new DocAppointmentModel("Rishabh","11:15 am"));
+        docAppointmentModels.add(new DocAppointmentModel("Rishabh Singh","11:15 am"));
+        docAppointmentModels.add(new DocAppointmentModel("Ayush Sharma","11:40 am"));
+        docAppointmentModels.add(new DocAppointmentModel("Paritosh Varshney","12:000 pm"));
+        docAppointmentModels.add(new DocAppointmentModel("Divyam Aggarwal","12:20 pm"));
+        docAppointmentModels.add(new DocAppointmentModel("Yatik Budhrani","12:40 pm"));
+        docAppointmentModels.add(new DocAppointmentModel("Aditya Sharma","1:00 pm"));
+        docAppointmentModels.add(new DocAppointmentModel("Utkarsh Kere","1:30 pm"));
+        docAppointmentModels.add(new DocAppointmentModel("Shivansh Bansal","1:50 pm"));
+        docAppointmentModels.add(new DocAppointmentModel("Arushi Tiwari","2:30 pm"));
+        docAppointmentModels.add(new DocAppointmentModel("Sachit Pant","2:50 pm"));
+
     }
 
     private void refreshAdapter() {

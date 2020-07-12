@@ -96,8 +96,10 @@ public class DoctorAppointmentInternal extends AppCompatActivity {
     }
 
     private void addData() {
-        for (int i=0;i<3;i++)
-            prescriptions.add(new PrescriptionModel("Azithrol 200 mg","2 times a day","after lunch, after dinner"));
+        prescriptions.add(new PrescriptionModel("Azithrol 200 mg","2 times a day","after lunch, after dinner"));
+        prescriptions.add(new PrescriptionModel("Glycomet GP 850 mg","3 times a day","after each meal"));
+        prescriptions.add(new PrescriptionModel("Dexilant 500 mg","Once","Before going to bed"));
+
     }
 
     private void refreshAdapter() {
