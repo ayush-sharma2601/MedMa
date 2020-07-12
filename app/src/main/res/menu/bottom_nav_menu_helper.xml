@@ -9,7 +9,7 @@
         />
     <item
         android:title="notes"
-        android:id="@+id/patient_emergency"
+        android:id="@+id/helper_notes"
         android:icon="@drawable/ic_alarm"
     />
 

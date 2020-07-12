@@ -40,6 +40,7 @@ public class CustomDialogClass extends Dialog {
         book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 status.setVisibility(View.VISIBLE);
 
             }
