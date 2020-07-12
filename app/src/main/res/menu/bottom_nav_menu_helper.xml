@@ -13,9 +13,4 @@
         android:icon="@drawable/ic_alarm"
     />
 
-    <item
-        android:title="leave"
-        android:id="@+id/patient_rooms"
-        android:icon="@drawable/ic_bed"
-        />
 </menu>

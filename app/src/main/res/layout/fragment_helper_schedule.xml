@@ -13,7 +13,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:id="@+id/assignment"
             android:background="@color/colorPrimary"
             android:layout_alignParentTop="true"
             >
@@ -51,6 +53,13 @@
 
 
         </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/assignment"
+            android:paddingBottom="8dp"
+            android:id="@+id/helper_patientt_list_rv"/>
     </RelativeLayout>
 
 </ScrollView>

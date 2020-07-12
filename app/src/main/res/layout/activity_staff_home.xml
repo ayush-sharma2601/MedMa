@@ -74,7 +74,7 @@ tools:context=".StaffSide.ActivitiesS.StaffHome">
         app:abb_indicatorMargin="16dp"
         app:abb_indicatorHeight="4dp"
         android:layout_alignParentBottom="true"
-        app:abb_tabs="@menu/bottom_nav_menu_patient"
+        app:abb_tabs="@menu/bottom_nav_menu_helper"
         app:abb_selectedIndex="0" />
 
 </RelativeLayout>
