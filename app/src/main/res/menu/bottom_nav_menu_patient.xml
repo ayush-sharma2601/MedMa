@@ -3,19 +3,19 @@
 
 
     <item
-        android:id="@+id/doctor_schedule"
+        android:id="@+id/patient_schedule"
         android:title="schedule"
         android:icon="@drawable/ic_schedule"
         />
     <item
         android:title="emergency"
-        android:id="@+id/doctor_inventory"
-        android:icon="@drawable/ic_medicine"
+        android:id="@+id/patient_emergency"
+        android:icon="@drawable/ic_alarm"
     />
 
     <item
-        android:title="summons"
-        android:id="@+id/doctor_summon"
-        android:icon="@drawable/ic_nurse"
+        android:title="rooms"
+        android:id="@+id/patient_rooms"
+        android:icon="@drawable/ic_bed"
         />
 </menu>

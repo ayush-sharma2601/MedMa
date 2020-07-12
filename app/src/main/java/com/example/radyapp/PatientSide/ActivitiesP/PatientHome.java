@@ -47,19 +47,16 @@ public class PatientHome extends AppCompatActivity {
             @Override
             public void onTabSelected(int i, @Nullable AnimatedBottomBar.Tab tab, int i1, @NotNull AnimatedBottomBar.Tab tab1) {
                 switch (tab1.getId()){
-                    case R.id.doctor_schedule:{
+                    case R.id.patient_schedule:{
                         loadFragment(new PatientScheduleFragment());
-                        Toast.makeText(PatientHome.this,"0",Toast.LENGTH_SHORT).show();
                         break;
                     }
-                    case R.id.doctor_inventory:{
+                    case R.id.patient_emergency:{
                         loadFragment(new EmergencyFragment());
-                        Toast.makeText(PatientHome.this,"1",Toast.LENGTH_SHORT).show();
                         break;
                     }
-                    case R.id.doctor_summon:{
+                    case R.id.patient_rooms:{
                         loadFragment(new PatientBedFragment());
-                        Toast.makeText(PatientHome.this,"2",Toast.LENGTH_SHORT).show();
                         break;
 
                     }

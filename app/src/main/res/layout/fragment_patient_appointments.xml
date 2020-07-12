@@ -15,7 +15,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/patient_appointments_rv1"/>
+            android:id="@+id/patient_appointments_rv1"
+            android:paddingBottom="8dp"/>
 
     </ScrollView>
 
