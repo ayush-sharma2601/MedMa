@@ -59,6 +59,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="problem:"
+        android:layout_marginTop="2dp"
+        android:textSize="11sp"
+        android:layout_below="@id/appointment_roomtv"
+        android:id="@+id/appointment_problemtv"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="cough,cold"
+        android:layout_marginTop="2dp"
+        android:layout_alignBottom="@id/appointment_problemtv"
+        android:textSize="11sp"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@id/appointment_problemtv"
+        android:id="@+id/appointment_problem"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_medium"
         android:text="ward E- 210"
         android:layout_marginTop="2dp"
@@ -109,7 +131,7 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:text="cancel"
-        android:layout_below="@id/appointment_roomtv"
+        android:layout_below="@id/appointment_problemtv"
         android:textSize="13sp"
         android:background="@drawable/button_back"
         android:textColor="@color/white"

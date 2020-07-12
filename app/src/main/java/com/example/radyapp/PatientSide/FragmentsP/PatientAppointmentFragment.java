@@ -1,5 +1,6 @@
 package com.example.radyapp.PatientSide.FragmentsP;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.example.radyapp.DoctorSide.ResponseModels.PrescriptionModel;
 import com.example.radyapp.PatientSide.AdaptersP.PatientAppointmentAdapter;
 import com.example.radyapp.PatientSide.ModelsP.PatientApppointmentModel;
 import com.example.radyapp.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -24,6 +26,7 @@ public class PatientAppointmentFragment extends Fragment {
     PatientAppointmentAdapter appointmentsAdapter;
     ArrayList<PatientApppointmentModel> patientAppointmentModels;
     ArrayList<PrescriptionModel> prescriptionModels;
+    FloatingActionButton addApp;
 
     public PatientAppointmentFragment() {
         // Required empty public constructor
@@ -53,6 +56,13 @@ public class PatientAppointmentFragment extends Fragment {
         attachAdapter();
 
         refreshAdapter();
+
+        addApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         return view;
 
@@ -92,5 +102,6 @@ public class PatientAppointmentFragment extends Fragment {
 
     private void attachId() {
         appointmentsRv=view.findViewById(R.id.patient_appointments_rv1);
+        addApp = view.findViewById(R.id.add_patient_appointment_fab);
     }
 }
