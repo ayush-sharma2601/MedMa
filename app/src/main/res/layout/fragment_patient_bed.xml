@@ -4,10 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="A list of our available and vacant rooms."
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_marginHorizontal="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/txt"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/txt"
         android:fillViewport="true"
+
         android:id="@+id/scroll">
 
         <androidx.recyclerview.widget.RecyclerView
