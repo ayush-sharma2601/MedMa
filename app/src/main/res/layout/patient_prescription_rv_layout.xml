@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginHorizontal="10dp"
+    android:background="@drawable/notice_back">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zoratol 600 MG"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/ubuntu_medium"
+        android:id="@+id/patient_pres_name"/>
+
+    <TextView
+        android:id="@+id/patient_pres_dosage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/patient_pres_name"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="3 times a day"
+        android:textSize="12sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="after breakfast, after lunch, after dinner."
+        android:fontFamily="@font/montserrat_medium"
+        android:id="@+id/patient_pres_comment"
+        android:textSize="12sp"
+        android:layout_below="@id/patient_pres_dosage"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_alignParentEnd="true"
+        android:text="By Dr Rishabh Singh"
+        android:fontFamily="@font/ubuntu_bold"
+        android:id="@+id/pres_doctor"
+        android:textSize="12sp"
+        android:layout_below="@id/patient_pres_comment"/>
+
+</RelativeLayout>

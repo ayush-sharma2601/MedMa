@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="15dp"
+    android:background="@drawable/rv_back"
+    android:padding="15dp"
+    android:layout_marginTop="6dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Dr Baggha"
+        android:textSize="17sp"
+        android:id="@+id/doctor_name"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#388E3C"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Confirmed"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/appointment_status"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="HOD, ENT"
+        android:layout_marginTop="5dp"
+        android:textSize="11sp"
+        android:layout_below="@id/doctor_name"
+        android:id="@+id/doctor_dept_appointment"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="date:"
+        android:layout_marginTop="10dp"
+        android:textSize="11sp"
+        android:layout_below="@id/doctor_dept_appointment"
+        android:id="@+id/appointment_datetv"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="room:"
+        android:layout_marginTop="2dp"
+        android:textSize="11sp"
+        android:layout_below="@id/appointment_datetv"
+        android:id="@+id/appointment_roomtv"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="problem:"
+        android:layout_marginTop="2dp"
+        android:textSize="11sp"
+        android:layout_below="@id/appointment_roomtv"
+        android:id="@+id/appointment_problemtv"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="cough,cold"
+        android:layout_marginTop="2dp"
+        android:layout_alignBottom="@id/appointment_problemtv"
+        android:textSize="11sp"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@id/appointment_problemtv"
+        android:id="@+id/appointment_problem"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="ward E- 210"
+        android:layout_marginTop="2dp"
+        android:layout_alignBottom="@id/appointment_roomtv"
+        android:textSize="11sp"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@id/appointment_roomtv"
+        android:id="@+id/appointment_room"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="time:"
+        android:layout_marginTop="2dp"
+        android:textSize="15sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@id/cancel_app_btn"
+        android:id="@+id/appointment_timetv"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="21/05/2020"
+        android:layout_marginTop="2dp"
+        android:layout_alignBottom="@id/appointment_datetv"
+        android:textSize="11sp"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@id/appointment_datetv"
+        android:id="@+id/appointment_date"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="4:20 PM"
+        android:layout_marginTop="2dp"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@id/appointment_timetv"
+        android:layout_alignBottom="@id/appointment_timetv"
+        android:id="@+id/appointment_time"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="cancel"
+        android:layout_below="@id/appointment_problemtv"
+        android:textSize="13sp"
+        android:background="@drawable/button_back"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/red"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/cancel_app_btn"/>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/helper_profile"
+        android:title="Profile"
+        android:onClick="HelperProfile"
+        />
+    <item
+        android:title="Notices"
+        android:id="@+id/helper_notices"
+        android:onClick="HelperNotices"
+    />
+
+    <item
+        android:title="Logout"
+        android:id="@+id/helper_logout"
+        android:onClick="HelperLogout"
+        />
+</menu>

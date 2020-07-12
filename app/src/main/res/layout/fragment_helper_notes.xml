@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".StaffSide.FragmentsS.HelperNotes">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="center"
+        android:paddingHorizontal="40dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp"
+        android:id="@+id/head"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="To-do List"/>
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_plus"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:id="@+id/add_notes"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/head"
+            android:padding="50dp"
+            android:background="#FFE4A1"
+            android:id="@+id/helper_notes_rv">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="#000"
+                android:text="Check on patient in room E-123 again later\n\nrestock iodine bottles"
+                android:id="@+id/note"/>
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="50dp"
+            android:hint="type note"
+            android:paddingHorizontal="15dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/task"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>

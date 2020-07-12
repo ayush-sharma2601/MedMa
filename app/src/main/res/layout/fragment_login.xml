@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/grad_back"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_tablayout"
+        android:layout_marginTop="20dp"
+        app:tabTextColor="@color/white"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicator="@drawable/scroll_indicator"
+        android:layout_marginHorizontal="40dp"
+        >
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_tab_patient"
+            android:text="Patient"
+            android:layout_marginHorizontal="10dp"
+            />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_tab_staff"
+            android:text="Staff"
+            android:layout_marginHorizontal="10dp"
+            />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_viewpager"
+        android:layout_below="@id/login_tablayout"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/login_activity_frameLayout"
+            />
+
+    </androidx.viewpager.widget.ViewPager>
+        
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="LOGIN"-->
+<!--            android:layout_below="@id/login_tablayout"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:fontFamily="@font/ubuntu_medium"-->
+<!--            android:textSize="40sp"-->
+<!--            android:id="@+id/fragment_login_header"-->
+<!--            android:layout_marginTop="46dp"-->
+<!--            android:layout_marginStart="40dp"-->
+<!--            />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:id="@+id/fragment_login_image"-->
+<!--        android:layout_below="@id/fragment_login_header"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="80dp"-->
+<!--        android:src="@drawable/ic_logo"-->
+<!--        />-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:layout_marginHorizontal="50dp"-->
+<!--        app:hintTextColor="#00228A90"-->
+<!--        android:layout_below="@id/fragment_login_image"-->
+<!--        android:id="@+id/fragment_login_email_et_container"-->
+<!--        app:startIconDrawable="@drawable/ic_user"-->
+<!--        >-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="E-mail"-->
+<!--            android:singleLine="true"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:id="@+id/fragment_login_email_et"-->
+<!--            android:background="@drawable/textview_back"-->
+<!--            android:padding="10dp"/>-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_marginHorizontal="50dp"-->
+<!--        app:passwordToggleEnabled="true"-->
+<!--        android:layout_below="@id/fragment_login_email_et_container"-->
+<!--        app:hintTextColor="#00228A90"-->
+<!--        android:id="@+id/fragment_login_password_et_container"-->
+<!--        app:startIconDrawable="@drawable/ic_password"-->
+<!--        >-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:hint="Password"-->
+<!--            android:singleLine="true"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:id="@+id/fragment_login_password_et"-->
+<!--            android:background="@drawable/textview_back"-->
+
+<!--            />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="LOGIN"-->
+<!--        android:id="@+id/fragment_login_button"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:fontFamily="@font/ubuntu_medium"-->
+<!--        android:layout_below="@id/fragment_login_password_et_container"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:background="@drawable/button_back"-->
+<!--        android:paddingHorizontal="30dp"-->
+<!--        android:textSize="20dp"-->
+<!--        />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_below="@id/fragment_login_button"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Don't have an account?"-->
+<!--            android:textSize="17sp"-->
+<!--            android:textColor="@color/smoke"/>-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Register"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:id="@+id/fragment_login_register_button"-->
+<!--            android:textSize="24sp"-->
+<!--            android:layout_marginStart="15dp"/>-->
+
+<!--    </LinearLayout>-->
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".StaffSide.FragmentsS.HelperSchedule">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:id="@+id/assignment"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentTop="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_toLeftOf="@id/done_btn"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Assigned to Dr Rakesh Kumar Verma"
+                android:id="@+id/assigned_doctor_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_below="@id/assigned_doctor_name"
+                android:text="OPD Ward-G 223"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@id/done_btn"
+                android:id="@+id/assigned_doctor_room"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/button_back"
+                android:id="@+id/done_btn"
+                android:backgroundTint="@color/white"
+                android:layout_centerVertical="true"
+                android:text="Done"
+                android:textColor="@color/colorPrimary"/>
+
+
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/assignment"
+            android:paddingBottom="8dp"
+            android:id="@+id/helper_patientt_list_rv"/>
+    </RelativeLayout>
+
+</ScrollView>

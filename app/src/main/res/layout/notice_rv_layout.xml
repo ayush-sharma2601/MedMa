@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/notice_back">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conference on Human Mind and Mental Disability by Dr Shetty"
+        android:fontFamily="@font/ubuntu_bold"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/motice_head"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Administration"
+        android:layout_below="@id/motice_head"
+        android:fontFamily="@font/montserrat_medium"
+        android:textSize="11sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="3dp"
+        android:id="@+id/motice_source"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21 Jul 2020"
+        android:fontFamily="@font/ubuntu_bold"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="3dp"
+        android:textSize="13sp"
+        android:textColor="#000"
+        android:id="@+id/motice_date"
+        android:layout_below="@id/motice_source"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The content of notice ..."
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="3dp"
+        android:textSize="15sp"
+        android:maxLines="4"
+        android:textColor="#000"
+        android:id="@+id/motice_content"
+        android:layout_below="@id/motice_date"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read More"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="3dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/motice_read_more"
+        android:layout_below="@id/motice_content"/>
+
+
+</RelativeLayout>
