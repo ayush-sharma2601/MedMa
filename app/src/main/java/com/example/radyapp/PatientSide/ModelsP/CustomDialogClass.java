@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,12 +15,12 @@ import androidx.annotation.NonNull;
 
 import com.example.radyapp.R;
 
-public class customDialogClass extends Dialog {
+public class CustomDialogClass extends Dialog {
     Context context;
     EditText problem;
     Button book;
     TextView status;
-    public customDialogClass(@NonNull Context context) {
+    public CustomDialogClass(@NonNull Context context) {
         super(context);
         this.context=context;
     }
@@ -35,6 +36,13 @@ public class customDialogClass extends Dialog {
         problem = findViewById(R.id.app_probleem_et);
         book = findViewById(R.id.book_app_btn);
         status = findViewById(R.id.app_book_status);
+
+        book.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                status.setVisibility(View.VISIBLE);
+            }
+        });
 
 
     }

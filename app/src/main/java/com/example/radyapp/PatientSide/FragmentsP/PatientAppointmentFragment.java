@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.radyapp.DoctorSide.ResponseModels.PrescriptionModel;
 import com.example.radyapp.PatientSide.AdaptersP.PatientAppointmentAdapter;
+import com.example.radyapp.PatientSide.ModelsP.CustomDialogClass;
 import com.example.radyapp.PatientSide.ModelsP.PatientApppointmentModel;
 import com.example.radyapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -60,7 +61,8 @@ public class PatientAppointmentFragment extends Fragment {
         addApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                CustomDialogClass dialogClass = new CustomDialogClass(view.getContext());
+                dialogClass.show();
             }
         });
 
