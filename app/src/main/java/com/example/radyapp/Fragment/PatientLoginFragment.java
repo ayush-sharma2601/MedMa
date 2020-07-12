@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.radyapp.Activities.LoginActivity;
 import com.example.radyapp.DoctorSide.Activities.DoctorHome;
+import com.example.radyapp.PatientSide.ActivitiesP.PatientHome;
 import com.example.radyapp.R;
 
 public class PatientLoginFragment extends Fragment {
@@ -59,7 +60,10 @@ public class PatientLoginFragment extends Fragment {
                 }
 
                 if (patientPassword.getError()==null&&patientUsername.getError()==null) {
-                    Intent mainIntent = new Intent(view.getContext(), DoctorHome.class);
+//                    Intent mainIntent = new Intent(view.getContext(), DoctorHome.class);
+//                    startActivity(mainIntent);
+
+                    Intent mainIntent = new Intent(view.getContext(), PatientHome.class);
                     startActivity(mainIntent);
                 }
             }

@@ -16,6 +16,7 @@
         <activity android:name=".DoctorSide.Activities.DoctorAppointmentInternal" />
         <activity android:name=".DoctorSide.Activities.DoctorHome" />
         <activity android:name=".Activities.MainActivity" />
+        <activity android:name=".PatientSide.ActivitiesP.PatientHome"/>
         <activity android:name=".Activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

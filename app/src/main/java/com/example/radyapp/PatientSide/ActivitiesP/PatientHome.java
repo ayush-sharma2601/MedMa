@@ -15,6 +15,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.radyapp.DoctorSide.Fragments.DoctorInventoryFragment;
 import com.example.radyapp.DoctorSide.Fragments.DoctorScheduleFragment;
+import com.example.radyapp.PatientSide.FragmentsP.EmergencyFragment;
+import com.example.radyapp.PatientSide.FragmentsP.PatientAppointmentFragment;
+import com.example.radyapp.PatientSide.FragmentsP.PatientBedFragment;
+import com.example.radyapp.PatientSide.FragmentsP.PatientScheduleFragment;
 import com.example.radyapp.R;
 
 import org.jetbrains.annotations.NotNull;
@@ -36,7 +40,7 @@ public class PatientHome extends AppCompatActivity {
         setContentView(R.layout.activity_patient_home);
         attachID();
 
-        loadFragment(new DoctorScheduleFragment());
+        loadFragment(new PatientScheduleFragment());
 
 
         bottomNavigationView.setOnTabSelectListener(new AnimatedBottomBar.OnTabSelectListener() {
@@ -44,16 +48,17 @@ public class PatientHome extends AppCompatActivity {
             public void onTabSelected(int i, @Nullable AnimatedBottomBar.Tab tab, int i1, @NotNull AnimatedBottomBar.Tab tab1) {
                 switch (tab1.getId()){
                     case R.id.doctor_schedule:{
-                        loadFragment(new DoctorScheduleFragment());
+                        loadFragment(new PatientScheduleFragment());
                         Toast.makeText(PatientHome.this,"0",Toast.LENGTH_SHORT).show();
                         break;
                     }
                     case R.id.doctor_inventory:{
-                        loadFragment(new DoctorInventoryFragment());
+                        loadFragment(new EmergencyFragment());
                         Toast.makeText(PatientHome.this,"1",Toast.LENGTH_SHORT).show();
                         break;
                     }
                     case R.id.doctor_summon:{
+                        loadFragment(new PatientBedFragment());
                         Toast.makeText(PatientHome.this,"2",Toast.LENGTH_SHORT).show();
                         break;
 
@@ -63,23 +68,7 @@ public class PatientHome extends AppCompatActivity {
 
             @Override
             public void onTabReselected(int i, @NotNull AnimatedBottomBar.Tab tab) {
-                switch (tab.getId()){
-                    case R.id.doctor_schedule:{
-                        loadFragment(new DoctorScheduleFragment());
-                        Toast.makeText(PatientHome.this,"0",Toast.LENGTH_SHORT).show();
-                        break;
-                    }
-                    case R.id.doctor_inventory:{
-                        loadFragment(new DoctorInventoryFragment());
-                        Toast.makeText(PatientHome.this,"1",Toast.LENGTH_SHORT).show();
-                        break;
-                    }
-                    case R.id.doctor_summon:{
-                        Toast.makeText(PatientHome.this,"2",Toast.LENGTH_SHORT).show();
-                        break;
 
-                    }
-                }
             }
         });
 

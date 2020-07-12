@@ -10,12 +10,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.radyapp.DoctorSide.Adapters.AppointmentsAdapter;
 import com.example.radyapp.DoctorSide.Adapters.SummonAdapter;
 import com.example.radyapp.DoctorSide.ResponseModels.AssignedModel;
 import com.example.radyapp.DoctorSide.ResponseModels.AvailableModel;
-import com.example.radyapp.DoctorSide.ResponseModels.DocAppointmentModel;
-import com.example.radyapp.DoctorSide.ResponseModels.TextModel;
 import com.example.radyapp.R;
 
 import java.util.ArrayList;
