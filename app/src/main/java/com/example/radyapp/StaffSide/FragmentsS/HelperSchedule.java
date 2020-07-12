@@ -62,10 +62,19 @@ public class HelperSchedule extends Fragment {
     }
 
     private void addData() {
-        for (int i=0;i<10;i++)
-            patientModels.add(new PatientModel("Rishabh Singh","Dr. Boora"
-                    ,"129","4:20",
-                    "Bohot zyada beemar lagta hai Shayad na bach paaye"));
+
+            patientModels.add(new PatientModel("Rishabh Singh","Dr. Baggha"
+                    ,"Ward E-129","12:50 AM",
+                    "needs more dosage of IV drops"));
+        patientModels.add(new PatientModel("Rakehs Mittal","Dr. Baggha"
+                ,"Ward E-130","1:50 PM",
+                "head injury; needs 2 week rest"));
+        patientModels.add(new PatientModel("Suresh Matt","Dr. Batra"
+                ,"Ward E-139","3:10 PM",
+                "aenestheshia injection"));
+        patientModels.add(new PatientModel("Paritosh Varshney","Dr. Dutt"
+                ,"Ward E-159","4:50 PM",
+                "needs more dosage of IV drops"));
     }
 
     private void initAdapter() {

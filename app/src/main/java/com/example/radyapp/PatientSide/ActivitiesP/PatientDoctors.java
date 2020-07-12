@@ -61,8 +61,17 @@ public class PatientDoctors extends AppCompatActivity {
     }
 
     private void addData() {
-        for (int i=0;i<10;i++)
-            doctorListModels.add(new DoctorListModel("Dr. Boora","ENT","69"));
+            doctorListModels.add(new DoctorListModel("Dr. Baggha","ENT","Ward E-210"));
+        doctorListModels.add(new DoctorListModel("Dr. Singh","HOD,Dental","Ward F-21"));
+        doctorListModels.add(new DoctorListModel("Dr. Kumar","Gastro","Ward D-68"));
+        doctorListModels.add(new DoctorListModel("Dr. Anil","Sub,gastro","Ward E-215"));
+        doctorListModels.add(new DoctorListModel("Dr. Makkhani","sub,ENT","Ward E-220"));
+        doctorListModels.add(new DoctorListModel("Dr. Batra","Neuro","Ward G-55"));
+        doctorListModels.add(new DoctorListModel("Dr. Aggrawal","Neuro","Ward E-51"));
+        doctorListModels.add(new DoctorListModel("Dr. Sharma","ENT","Ward g-35"));
+        doctorListModels.add(new DoctorListModel("Dr. Gajendra","Dental","Ward A-62"));
+        doctorListModels.add(new DoctorListModel("Dr. Garg","ENT","Ward A-245"));
+
     }
 
     private void initAdapter() {

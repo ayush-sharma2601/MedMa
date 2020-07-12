@@ -59,9 +59,12 @@ public class PatientBedFragment extends Fragment {
     }
 
     private void addData() {
-        for (int i=0;i<10;i++)
-            patientBedModels.add(new PatientBedModel("Private","300"
-                    ,"80","Karen","9318458933"));
+            patientBedModels.add(new PatientBedModel("Private Ward Beds","70"
+                    ,"5","Mr Singh","9318458933"));
+        patientBedModels.add(new PatientBedModel("General Ward Beds","300"
+                ,"80","Mr Aggrawal","9318458933"));
+        patientBedModels.add(new PatientBedModel("Emergency Ward Beds","100"
+                ,"90","Mr Budhrani","9318458933"));
     }
 
     private void initAdapter() {

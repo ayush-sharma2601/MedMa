@@ -46,7 +46,7 @@ public class HelperNotes extends Fragment {
         final SharedPreferences.Editor myEdit
                 = sharedPreferences.edit();
 
-        note.append(sharedPreferences.getString("name",null));
+//        note.append(sharedPreferences.getString("name",null));
 
         addButon.setOnClickListener(new View.OnClickListener() {
             @Override
