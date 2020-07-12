@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientSide.FragmentsP.EmergencyFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scan QR code to automatically fill forms during medical emergency."
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/head"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/emergency_qr_code"
+                android:background="@color/colorPrimary"
+                android:layout_below="@id/head"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:layout_below="@id/emergency_qr_code"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:id="@+id/line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call desk for Emergency"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/line"
+                android:id="@+id/head2"/>
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="011-24122124"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/emergency_call_btn"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_back"
+                    android:text="call now"
+                    android:backgroundTint="@color/red"
+                    android:textColor="@color/white"
+                    android:layout_marginHorizontal="30dp"
+                    android:fontFamily="@font/ubuntu_bold"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
