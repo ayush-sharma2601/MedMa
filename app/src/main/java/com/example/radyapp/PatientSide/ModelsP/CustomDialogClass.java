@@ -41,6 +41,7 @@ public class CustomDialogClass extends Dialog {
             @Override
             public void onClick(View v) {
                 status.setVisibility(View.VISIBLE);
+
             }
         });
 
