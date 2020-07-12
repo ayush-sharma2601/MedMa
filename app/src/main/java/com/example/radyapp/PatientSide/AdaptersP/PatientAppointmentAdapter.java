@@ -42,7 +42,6 @@ public class PatientAppointmentAdapter extends RecyclerView.Adapter<PatientAppoi
 
     @Override
     public void onBindViewHolder(@NonNull PatientAppointmentsAdapterRvVH holder, int position) {
-
         if (code == 0)
             holder.populatePatientAppointments(patientApppointmentModels.get(position));
 

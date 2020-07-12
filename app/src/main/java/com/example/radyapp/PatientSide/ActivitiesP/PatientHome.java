@@ -1,5 +1,6 @@
 package com.example.radyapp.PatientSide.ActivitiesP;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -106,6 +107,9 @@ public class PatientHome extends AppCompatActivity {
     }
 
     public void DoctorList(MenuItem item) {
+        Intent doctorIntent=new Intent(PatientHome.this,PatientDoctors.class);
+        startActivity(doctorIntent);
+        drawerLayout.closeDrawer(Gravity.LEFT);
     }
 
     public void PatientLogout(MenuItem item) {

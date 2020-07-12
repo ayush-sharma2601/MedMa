@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.radyapp.PatientSide.AdaptersP.DoctorListAdapter;
 import com.example.radyapp.PatientSide.ModelsP.DoctorListModel;
@@ -17,6 +19,7 @@ public class PatientDoctors extends AppCompatActivity {
     RecyclerView doctorRv;
     DoctorListAdapter doctorListAdapter;
     ArrayList<DoctorListModel> doctorListModels;
+    ImageView backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,12 @@ public class PatientDoctors extends AppCompatActivity {
 
         attachId();
 
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         attachLayout();
 
         initArrarList();
@@ -40,6 +49,7 @@ public class PatientDoctors extends AppCompatActivity {
 
     private void attachId() {
         doctorRv=findViewById(R.id.doctor_list_rv);
+        backButton=findViewById(R.id.doctor_list_back_btn);
     }
 
     private void attachLayout() {
