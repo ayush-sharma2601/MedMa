@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".PatientSide.FragmentsP.HelperNotes">
+    tools:context=".StaffSide.FragmentsS.HelperNotes">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
