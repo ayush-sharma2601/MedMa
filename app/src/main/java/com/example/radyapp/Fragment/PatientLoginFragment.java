@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.radyapp.Activities.LoginActivity;
 import com.example.radyapp.DoctorSide.Activities.DoctorHome;
+import com.example.radyapp.Models.LoginCall;
 import com.example.radyapp.PatientSide.ActivitiesP.PatientHome;
 import com.example.radyapp.R;
 import com.example.radyapp.RetrofitClient;
@@ -80,10 +81,12 @@ public class PatientLoginFragment extends Fragment {
             }
         });
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 LoginActivity.getInstance().loadFragment(new SignupFragment());
+
             }
         });
 
@@ -91,14 +94,15 @@ public class PatientLoginFragment extends Fragment {
     }
 
     private void loginUser(String username, String password) {
+
         Map<String,String> body = new HashMap<>();
         body.put("email",username);
         body.put("password",password);
 
-        Call<String> call = RetrofitClient.getClient().loginUser(body);
-        call.enqueue(new Callback<String>() {
+        Call<LoginCall> call = RetrofitClient.getClient().loginUser(body);
+        call.enqueue(new Callback<LoginCall>() {
             @Override
-            public void onResponse(Call<String> call, Response<String> response) {
+            public void onResponse(Call<LoginCall> call, Response<LoginCall> response) {
 
 
                 //Idhar kya krna hai?
@@ -108,7 +112,7 @@ public class PatientLoginFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<String> call, Throwable t) {
+            public void onFailure(Call<LoginCall> call, Throwable t) {
                 Toast.makeText(getContext(),"Could not register",Toast.LENGTH_LONG).show();
 
 

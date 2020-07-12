@@ -1,5 +1,6 @@
 package com.example.radyapp;
 
+import com.example.radyapp.Models.LoginCall;
 import com.example.radyapp.Models.UserRegisterModel;
 
 import java.util.Map;
@@ -14,7 +15,7 @@ public interface RetrofitAPIInterface {
     Call<String> registerUser(@Body Map<String,String> user);
 
     @POST("/login")
-    Call<String> loginUser(@Body Map<String,String> user);
+    Call<LoginCall> loginUser(@Body Map<String,String> user);
 
 
 
