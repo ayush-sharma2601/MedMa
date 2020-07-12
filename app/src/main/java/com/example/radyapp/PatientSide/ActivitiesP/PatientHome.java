@@ -104,6 +104,9 @@ public class PatientHome extends AppCompatActivity {
     }
 
     public void PatientProfile(MenuItem item) {
+        Intent profileintent=new Intent(PatientHome.this,PatientProfile.class);
+        startActivity(profileintent);
+        drawerLayout.closeDrawer(Gravity.LEFT);
     }
 
     public void DoctorList(MenuItem item) {
