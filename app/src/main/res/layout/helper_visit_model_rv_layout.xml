@@ -37,7 +37,7 @@
         android:layout_centerVertical="true"
         android:fontFamily="@font/ubuntu_bold"
         android:layout_marginEnd="10dp"
-        android:id="@+id/time"/>
+            android:id="@+id/time"/>
     <TextView
         android:layout_width="15dp"
         android:layout_height="15dp"

@@ -16,16 +16,18 @@ import com.example.radyapp.DoctorSide.ResponseModels.NoticeModel;
 import com.example.radyapp.R;
 import com.example.radyapp.StaffSide.AdaptersS.PatientRVAdapter;
 import com.example.radyapp.StaffSide.ModelsS.NoteModel;
+import com.example.radyapp.StaffSide.ModelsS.PatientModel;
 
 import java.util.ArrayList;
 
 
 public class HelperNotes extends Fragment {
 
-   View view;
+    View view;
     RecyclerView notesRV;
     PatientRVAdapter noteadapter;
     ArrayList<NoteModel> notes;
+    ArrayList<PatientModel> patientModels;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -68,14 +70,14 @@ public class HelperNotes extends Fragment {
     }
 
     private void initAdapter() {
-        noteadapter =new PatientRVAdapter(notes,0);
+        noteadapter =new PatientRVAdapter(1,patientModels,notes);
     }
 
     private void attachId() {
         notesRV=view.findViewById(R.id.helper_notes_rv);
     }
-    private void attachAdapter() {
 
+    private void attachAdapter() {
         notesRV.setAdapter(noteadapter);
     }
 }
