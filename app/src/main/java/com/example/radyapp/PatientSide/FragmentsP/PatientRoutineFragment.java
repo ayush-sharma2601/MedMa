@@ -68,11 +68,12 @@ public class PatientRoutineFragment extends Fragment {
     }
 
     private void addData() {
-        for (int i=0;i<3;i++)
-        {
-            patientNotesModels.add(new PatientNotesModel("Dr. Boora","Be a goog boy or Dr. Boora will come :') "));
-            patientPrescriptionModels.add(new PatientPrescriptionModel("Dolomide","500mg","3 times before each meal","Dr. Boora"));
-        }
+            patientNotesModels.add(new PatientNotesModel("Dr. Singh","Exercise daily for 30 mins"));
+            patientPrescriptionModels.add(new PatientPrescriptionModel("Dolomide 500 mg","3 time a day for 5 days","after each meal","Dr. Batra"));
+        patientPrescriptionModels.add(new PatientPrescriptionModel("Azithrol 500 mg","2 time a day for 3 days","after each meal","Dr. Singh"));
+        patientPrescriptionModels.add(new PatientPrescriptionModel("Disprin 50 mg","3 time a day for 5 days","after each meal","Dr. Kumar"));
+
+
 
     }
 

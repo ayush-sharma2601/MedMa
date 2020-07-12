@@ -82,6 +82,7 @@ public class PatientLoginFragment extends Fragment {
 
 //                    loginUser(patientUsername.getText().toString().trim(),patientPassword.getText().toString().trim());
                     Intent intent =new Intent(view.getContext(),PatientHome.class);
+                    view.getContext().startActivity(intent);
 //                    Intent mainIntent = new Intent(view.getContext(), StaffHome.class);
 //                    startActivity(mainIntent);
                 }
