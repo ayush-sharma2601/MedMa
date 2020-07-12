@@ -12,7 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.radyapp.DoctorSide.ResponseModels.PrescriptionModel;
 import com.example.radyapp.PatientSide.AdaptersP.PatientAppointmentAdapter;
+import com.example.radyapp.PatientSide.AdaptersP.PatientTaskAdapter;
 import com.example.radyapp.PatientSide.ModelsP.PatientApppointmentModel;
+import com.example.radyapp.PatientSide.ModelsP.PatientNotesModel;
+import com.example.radyapp.PatientSide.ModelsP.PatientPrescriptionModel;
 import com.example.radyapp.R;
 
 import java.util.ArrayList;
@@ -20,7 +23,11 @@ import java.util.ArrayList;
 public class PatientRoutineFragment extends Fragment {
 
     View view;
-
+    RecyclerView prescriptionRv;
+    RecyclerView taskRv;
+    PatientTaskAdapter patientTaskAdapter,prescriptionAdapter;
+    ArrayList<PatientPrescriptionModel> patientPrescriptionModels;
+    ArrayList<PatientNotesModel> patientNotesModels;
 
     public PatientRoutineFragment() {
         // Required empty public constructor
@@ -56,30 +63,40 @@ public class PatientRoutineFragment extends Fragment {
     }
 
     private void attachAdapter() {
-
-
+        taskRv.setAdapter(patientTaskAdapter);
+        prescriptionRv.setAdapter(prescriptionAdapter);
     }
 
     private void addData() {
-//        for (int i=0;i<10;i++)
-//
+        for (int i=0;i<3;i++)
+        {
+            patientNotesModels.add(new PatientNotesModel("Dr. Boora","Be a goog boy or Dr. Boora will come :') "));
+        }
+
     }
 
     private void refreshAdapter() {
-
-
+        patientTaskAdapter.notifyDataSetChanged();
+        prescriptionAdapter.notifyDataSetChanged();
     }
 
     private void attachLayout() {
+        taskRv.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL,false));
+        prescriptionRv.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL,false));
     }
 
     private void initArrarList() {
-
+        patientPrescriptionModels=new ArrayList<>(3);
+        patientNotesModels=new ArrayList<>(3);
     }
 
     private void initAdapter() {
+        patientTaskAdapter=new PatientTaskAdapter(1,patientPrescriptionModels,patientNotesModels);
+        prescriptionAdapter=new PatientTaskAdapter(0,patientPrescriptionModels,patientNotesModels);
     }
 
     private void attachId() {
+        taskRv=view.findViewById(R.id.);
+        prescriptionRv=view.findViewById(R.id.);
     }
 }
