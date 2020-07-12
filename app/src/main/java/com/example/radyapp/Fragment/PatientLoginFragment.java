@@ -73,7 +73,7 @@ public class PatientLoginFragment extends Fragment {
 //                    Intent mainIntent = new Intent(view.getContext(), DoctorHome.class);
 //                    startActivity(mainIntent);
 
-                    loginUser(patientUsername.getText().toString(),patientPassword.getText().toString(),"patient");
+                    loginUser(patientUsername.getText().toString(),patientPassword.getText().toString());
                     Intent mainIntent = new Intent(view.getContext(), StaffHome.class);
                     startActivity(mainIntent);
                 }
@@ -90,12 +90,12 @@ public class PatientLoginFragment extends Fragment {
         return view ;
     }
 
-    private void loginUser(String username, String password,String role) {
+    private void loginUser(String username, String password) {
         Map<String,String> body = new HashMap<>();
         body.put("email",username);
         body.put("password",password);
 
-        Call<String> call = RetrofitClient.getClient().registerUser(body);
+        Call<String> call = RetrofitClient.getClient().loginUser(body);
         call.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
@@ -110,6 +110,8 @@ public class PatientLoginFragment extends Fragment {
             @Override
             public void onFailure(Call<String> call, Throwable t) {
                 Toast.makeText(getContext(),"Could not register",Toast.LENGTH_LONG).show();
+
+
             }
         });
     }
