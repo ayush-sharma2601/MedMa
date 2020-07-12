@@ -96,7 +96,7 @@ public class PatientRoutineFragment extends Fragment {
     }
 
     private void attachId() {
-        taskRv=view.findViewById(R.id.);
-        prescriptionRv=view.findViewById(R.id.);
+        taskRv=view.findViewById(R.id.routine_notes_rv);
+        prescriptionRv=view.findViewById(R.id.routine_prescription_rv);
     }
 }

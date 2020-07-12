@@ -93,15 +93,15 @@ public class PatientAppointmentAdapter extends RecyclerView.Adapter<PatientAppoi
 
             time.setText(patientApppointmentModel.getTime());
             if (patientApppointmentModel.isStatus()){
-                status.setText("Confirm");
-                status.setTextColor(itemView.getContext().getResources().getColor(R.color.colorPrimary));
+                status.setText("Confirmed");
+                status.setTextColor(itemView.getContext().getResources().getColor(R.color.confirm));
                 date.setText(patientApppointmentModel.getDate());
                 doctorName.setText(patientApppointmentModel.getDoctorNAme());
                 room.setText(patientApppointmentModel.getRoomNo());
             }
             else {
                 status.setText("Pending");
-                status.setTextColor(itemView.getContext().getResources().getColor(R.color.red));
+                status.setTextColor(itemView.getContext().getResources().getColor(R.color.pending));
                 date.setText("pending");
                 doctorName.setText("doctor not assigned yet");
                 room.setText("not alloted");

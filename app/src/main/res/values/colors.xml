@@ -9,4 +9,6 @@
     <color name="white">#FFFFFF</color>
     <color name="smoke">#E0E0EB</color>
     <color name="red">#b21c1c</color>
+    <color name="confirm">#689F38</color>
+    <color name="pending">#FFA000</color>
 </resources>
