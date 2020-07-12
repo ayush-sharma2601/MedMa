@@ -16,6 +16,6 @@
     <item
         android:title="Logout"
         android:id="@+id/helper_logout"
-        android:onClick="helper_logout"
+        android:onClick="HelperLogout"
         />
 </menu>

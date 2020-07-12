@@ -75,7 +75,7 @@ public class HelperNotices extends AppCompatActivity {
     }
 
     private void attachId() {
-        noticeRV = findViewById(R.id.helper_notes_rv);
+        noticeRV = findViewById(R.id.helper_notices_rv);
         backBtn = findViewById(R.id.helper_notices_back_btn);
     }
 }

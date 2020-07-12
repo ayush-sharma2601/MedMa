@@ -87,7 +87,7 @@ tools:context=".StaffSide.ActivitiesS.StaffHome">
     android:background="@color/colorPrimary"
     app:itemTextColor="@color/smoke"
     app:itemIconTint="@color/smoke"
-    app:menu="@menu/side_drawer_menu_patient"
+    app:menu="@menu/side_drawer_menu_helper"
     app:headerLayout="@layout/drawer_header_layout"
     android:layout_gravity="left"/>
 

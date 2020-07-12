@@ -18,6 +18,7 @@ import com.example.radyapp.PatientSide.FragmentsP.EmergencyFragment;
 import com.example.radyapp.PatientSide.FragmentsP.PatientBedFragment;
 import com.example.radyapp.PatientSide.FragmentsP.PatientScheduleFragment;
 import com.example.radyapp.R;
+import com.example.radyapp.StaffSide.FragmentsS.HelperNotes;
 import com.example.radyapp.StaffSide.FragmentsS.HelperSchedule;
 
 import org.jetbrains.annotations.NotNull;
@@ -39,7 +40,7 @@ public class StaffHome extends AppCompatActivity {
 
         attachID();
 
-        loadFragment(new PatientScheduleFragment());
+        loadFragment(new HelperSchedule());
 
 
         bottomNavigationView.setOnTabSelectListener(new AnimatedBottomBar.OnTabSelectListener() {
@@ -51,7 +52,7 @@ public class StaffHome extends AppCompatActivity {
                         break;
                     }
                     case R.id.helper_notes:{
-                        loadFragment(new EmergencyFragment());
+                        loadFragment(new HelperNotes());
                         break;
                     }
 
@@ -83,7 +84,7 @@ public class StaffHome extends AppCompatActivity {
     public void loadFragment(Fragment fragment)
     {
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout,fragment);
+        fragmentTransaction.replace(R.id.frame_layout_helper,fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
@@ -97,7 +98,7 @@ public class StaffHome extends AppCompatActivity {
         drawerLayout.closeDrawer(Gravity.LEFT);
     }
 
-    public void helper_logout(MenuItem item) {
+    public void HelperLogout(MenuItem item) {
         Intent intent = new Intent(StaffHome.this, LoginActivity.class);
         startActivity(intent);
         finish();
