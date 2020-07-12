@@ -15,10 +15,12 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.radyapp.Activities.LoginActivity;
 import com.example.radyapp.DoctorSide.Fragments.DoctorInventoryFragment;
 import com.example.radyapp.DoctorSide.Fragments.DoctorScheduleFragment;
 import com.example.radyapp.DoctorSide.Fragments.DoctorSummonFragment;
 import com.example.radyapp.R;
+import com.example.radyapp.StaffSide.ActivitiesS.StaffHome;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
@@ -117,6 +119,9 @@ public class DoctorHome extends AppCompatActivity {
     }
 
     public void DoctorLogout(MenuItem item) {
+        Intent intent = new Intent(DoctorHome.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     public void loadFragment(Fragment fragment)
