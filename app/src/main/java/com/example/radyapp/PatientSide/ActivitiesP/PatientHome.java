@@ -1,4 +1,4 @@
-package com.example.radyapp.PatientSide;
+package com.example.radyapp.PatientSide.ActivitiesP;
 
 import android.os.Bundle;
 import android.view.Gravity;

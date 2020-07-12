@@ -24,6 +24,29 @@
                     android:layout_margin="15dp"
                     android:src="@drawable/ic_menu"
                     android:id="@+id/menu_btn"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="20dp"
+                    android:elevation="0dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/profile_photo_pat"
+                        android:elevation="4dp"
+                        android:scaleType="fitXY"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="AS"
+                        android:id="@+id/profile_text_pat"/>
+
+                </androidx.cardview.widget.CardView>
             </RelativeLayout>
         </com.google.android.material.appbar.AppBarLayout>
         <FrameLayout
@@ -50,7 +73,7 @@
             app:abb_indicatorMargin="16dp"
             app:abb_indicatorHeight="4dp"
             android:layout_alignParentBottom="true"
-            app:abb_tabs="@menu/bottom_nav_menu_doctor"
+            app:abb_tabs="@menu/bottom_nav_menu_patient"
             app:abb_selectedIndex="0" />
 
     </RelativeLayout>
@@ -63,7 +86,7 @@
         android:background="@color/colorPrimary"
         app:itemTextColor="@color/smoke"
         app:itemIconTint="@color/smoke"
-        app:menu="@menu/side_drawer_menu_doctor"
+        app:menu="@menu/side_drawer_menu_patient"
         app:headerLayout="@layout/drawer_header_layout"
         android:layout_gravity="left"/>
 
