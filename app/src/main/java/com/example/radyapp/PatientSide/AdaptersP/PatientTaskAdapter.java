@@ -40,7 +40,6 @@ public class PatientTaskAdapter extends RecyclerView.Adapter<PatientTaskAdapter.
         else
         {
             return new PatientTaskAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.doctornote_model_rv_layout,parent,false));
-
         }
     }
 

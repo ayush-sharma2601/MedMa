@@ -36,11 +36,8 @@ public class PatientAppointmentAdapter extends RecyclerView.Adapter<PatientAppoi
     @Override
     public PatientAppointmentsAdapterRvVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        if (code == 0)
             return new PatientAppointmentsAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.patient_appointment_rv_layout, parent, false));
 
-        else
-            return new PatientAppointmentsAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.doctor_refer_rv_item, parent, false));
     }
 
     @Override
@@ -49,8 +46,6 @@ public class PatientAppointmentAdapter extends RecyclerView.Adapter<PatientAppoi
         if (code == 0)
             holder.populatePatientAppointments(patientApppointmentModels.get(position));
 
-        else
-            holder.populatePatientPrescriptions(prescriptionModels.get(position));
     }
 
     @Override
@@ -62,7 +57,7 @@ public class PatientAppointmentAdapter extends RecyclerView.Adapter<PatientAppoi
     }
 
     public class PatientAppointmentsAdapterRvVH extends RecyclerView.ViewHolder {
-        TextView doctorName,status,date,time,room,dept;
+        TextView doctorName,status,date,time,room,dept,problem;
         Button cancelApp;
 
         public PatientAppointmentsAdapterRvVH(@NonNull View itemView) {
@@ -76,6 +71,7 @@ public class PatientAppointmentAdapter extends RecyclerView.Adapter<PatientAppoi
                 dept = itemView.findViewById(R.id.doctor_dept_appointment);
                 cancelApp = itemView.findViewById(R.id.cancel_app_btn);
                 room = itemView.findViewById(R.id.appointment_room);
+                problem=itemView.findViewById(R.id.appointment_problem);
 
                 cancelApp.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -98,6 +94,7 @@ public class PatientAppointmentAdapter extends RecyclerView.Adapter<PatientAppoi
                 date.setText(patientApppointmentModel.getDate());
                 doctorName.setText(patientApppointmentModel.getDoctorNAme());
                 room.setText(patientApppointmentModel.getRoomNo());
+                problem.setText(patientApppointmentModel.getProblem());
             }
             else {
                 status.setText("Pending");
@@ -105,14 +102,11 @@ public class PatientAppointmentAdapter extends RecyclerView.Adapter<PatientAppoi
                 date.setText("pending");
                 doctorName.setText("doctor not assigned yet");
                 room.setText("not alloted");
+                problem.setText(patientApppointmentModel.getProblem());
             }
         }
 
-        public void populatePatientPrescriptions(PrescriptionModel prescriptionModel) {
-
-        }
     }
 
-    {
-    }
+
 }
