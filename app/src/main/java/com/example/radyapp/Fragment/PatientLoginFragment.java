@@ -80,7 +80,7 @@ public class PatientLoginFragment extends Fragment {
 //                    Intent mainIntent = new Intent(view.getContext(), DoctorHome.class);
 //                    startActivity(mainIntent);
 
-                    loginUser(patientUsername.getText().toString(),patientPassword.getText().toString());
+                    loginUser(patientUsername.getText().toString().trim(),patientPassword.getText().toString().trim());
 //                    Intent mainIntent = new Intent(view.getContext(), StaffHome.class);
 //                    startActivity(mainIntent);
                 }
@@ -99,11 +99,9 @@ public class PatientLoginFragment extends Fragment {
         return view ;
     }
 
-    private void loginUser(String username, String password) {
+    private void loginUser(final String username, final String password) {
 
-        Map<String,String> body = new HashMap<>();
-        body.put("email",username);
-        body.put("password",password);
+
 
         Call<LoginCall> call = RetrofitClient.getClient().loginUser(username,password);
         call.enqueue(new Callback<LoginCall>() {
@@ -118,20 +116,18 @@ public class PatientLoginFragment extends Fragment {
                             Intent intent = new Intent(view.getContext(),StaffHome.class);
                             view.getContext().startActivity(intent);
                         }
+                        else;
                     }
                     else {
                         Toast.makeText(view.getContext(),response.body().getMsg(),Toast.LENGTH_LONG).show();
                     }
 
-                //Idhar kya krna hai?
-                Toast.makeText(getContext(),response.body().toString(),Toast.LENGTH_LONG).show();
-                Intent intent =new Intent(getActivity(), DoctorHome.class);
 
             }
 
             @Override
             public void onFailure(Call<LoginCall> call, Throwable t) {
-                Toast.makeText(getContext(),"Could not login",Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),t.getMessage(),Toast.LENGTH_LONG).show();
 
 
             }
