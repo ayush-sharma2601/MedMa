@@ -10,6 +10,17 @@ public class LoginCall {
     @SerializedName("success")
     Boolean success;
 
+    @SerializedName("role")
+    Boolean role;
+
+    public Boolean getRole() {
+        return role;
+    }
+
+    public void setRole(Boolean role) {
+        this.role = role;
+    }
+
     public String getMsg() {
         return msg;
     }

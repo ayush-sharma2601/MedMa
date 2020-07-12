@@ -20,11 +20,41 @@
         android:id="@+id/head"
         android:fontFamily="@font/ubuntu_bold"
         android:text="To-do List"/>
-        <androidx.recyclerview.widget.RecyclerView
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_plus"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:id="@+id/add_notes"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/head"
-            android:id="@+id/helper_notes_rv"/>
+            android:rotation="10"
+            android:padding="50dp"
+            android:background="#FFE4A1"
+            android:id="@+id/helper_notes_rv">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rotation="-10"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="#000"
+                android:text="adasbfbkas"
+                android:id="@+id/note"/>
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="50dp"
+            android:hint="type note"
+            android:paddingHorizontal="15dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/task"/>
+
+
     </RelativeLayout>
 
 </ScrollView>

@@ -1,6 +1,7 @@
 package com.example.radyapp.Fragment;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +30,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.content.Context.MODE_PRIVATE;
+
 public class PatientLoginFragment extends Fragment {
 
     View view;
@@ -52,7 +55,10 @@ public class PatientLoginFragment extends Fragment {
 
         attachId();
 
-
+        SharedPreferences sh = view.getContext().getSharedPreferences("user",
+                MODE_PRIVATE);
+        final SharedPreferences.Editor myEdit
+                = sh.edit();
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,8 +81,8 @@ public class PatientLoginFragment extends Fragment {
 //                    startActivity(mainIntent);
 
                     loginUser(patientUsername.getText().toString(),patientPassword.getText().toString());
-                    Intent mainIntent = new Intent(view.getContext(), StaffHome.class);
-                    startActivity(mainIntent);
+//                    Intent mainIntent = new Intent(view.getContext(), StaffHome.class);
+//                    startActivity(mainIntent);
                 }
             }
         });
@@ -99,11 +105,23 @@ public class PatientLoginFragment extends Fragment {
         body.put("email",username);
         body.put("password",password);
 
-        Call<LoginCall> call = RetrofitClient.getClient().loginUser(body);
+        Call<LoginCall> call = RetrofitClient.getClient().loginUser(username,password);
         call.enqueue(new Callback<LoginCall>() {
             @Override
             public void onResponse(Call<LoginCall> call, Response<LoginCall> response) {
-
+                    if(response.body().getSuccess()){
+                        if(response.body().getRole().equals("doctor")){
+                            Intent intent = new Intent(view.getContext(),DoctorHome.class);
+                            view.getContext().startActivity(intent);
+                        }
+                        else if(response.body().getRole().equals("helper")){
+                            Intent intent = new Intent(view.getContext(),StaffHome.class);
+                            view.getContext().startActivity(intent);
+                        }
+                    }
+                    else {
+                        Toast.makeText(view.getContext(),response.body().getMsg(),Toast.LENGTH_LONG).show();
+                    }
 
                 //Idhar kya krna hai?
                 Toast.makeText(getContext(),response.body().toString(),Toast.LENGTH_LONG).show();
@@ -113,7 +131,7 @@ public class PatientLoginFragment extends Fragment {
 
             @Override
             public void onFailure(Call<LoginCall> call, Throwable t) {
-                Toast.makeText(getContext(),"Could not register",Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),"Could not login",Toast.LENGTH_LONG).show();
 
 
             }

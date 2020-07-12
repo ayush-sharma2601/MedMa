@@ -15,6 +15,8 @@ import com.example.radyapp.StaffSide.ModelsS.PatientModel;
 
 import java.util.ArrayList;
 
+
+
 public class PatientRVAdapter extends RecyclerView.Adapter<PatientRVAdapter.PatientRVAdapterVH> {
 
     int code;
@@ -25,7 +27,24 @@ public class PatientRVAdapter extends RecyclerView.Adapter<PatientRVAdapter.Pati
         this.code = code;
         this.patientModels = patientModels;
         this.noteModels = noteModels;
+
     }
+
+//    private void loadTasks(){
+//        RealmQuery<NoteModel> query = realm.where(NoteModel.class);
+//        RealmResults<NoteModel> results = query.findAll();
+//        noteModels.addAll(results);
+//        notifyDataSetChanged();
+//
+//    }
+//    public void addTask(NoteModel task){
+//        noteModels.add(task);
+//        realm.beginTransaction();
+//        realm.insertOrUpdate(task);
+//        realm.commitTransaction();
+//        notifyDataSetChanged();
+//
+//    }
 
     @NonNull
     @Override

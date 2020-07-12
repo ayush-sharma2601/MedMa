@@ -1,8 +1,12 @@
 package com.example.radyapp.StaffSide.ModelsS;
 
-public class NoteModel {
+
+public class NoteModel  {
     private String note;
     private boolean done;
+
+    public NoteModel() {
+    }
 
     public NoteModel(String note, boolean done) {
         this.note = note;
