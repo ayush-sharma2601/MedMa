@@ -5,12 +5,15 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import com.example.radyapp.Activities.LoginActivity;
 import com.example.radyapp.PatientSide.FragmentsP.EmergencyFragment;
 import com.example.radyapp.PatientSide.FragmentsP.PatientBedFragment;
 import com.example.radyapp.PatientSide.FragmentsP.PatientScheduleFragment;
@@ -83,5 +86,20 @@ public class StaffHome extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame_layout,fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
+    }
+
+    public void HelperProfile(MenuItem item) {
+    }
+
+    public void HelperNotices(MenuItem item) {
+        Intent intent = new Intent(StaffHome.this,HelperNotices.class);
+        startActivity(intent);
+        drawerLayout.closeDrawer(Gravity.LEFT);
+    }
+
+    public void helper_logout(MenuItem item) {
+        Intent intent = new Intent(StaffHome.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

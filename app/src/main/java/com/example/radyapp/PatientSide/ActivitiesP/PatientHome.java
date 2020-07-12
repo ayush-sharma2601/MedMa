@@ -14,6 +14,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.radyapp.Activities.LoginActivity;
 import com.example.radyapp.DoctorSide.Fragments.DoctorInventoryFragment;
 import com.example.radyapp.DoctorSide.Fragments.DoctorScheduleFragment;
 import com.example.radyapp.PatientSide.FragmentsP.EmergencyFragment;
@@ -21,6 +22,7 @@ import com.example.radyapp.PatientSide.FragmentsP.PatientAppointmentFragment;
 import com.example.radyapp.PatientSide.FragmentsP.PatientBedFragment;
 import com.example.radyapp.PatientSide.FragmentsP.PatientScheduleFragment;
 import com.example.radyapp.R;
+import com.example.radyapp.StaffSide.ActivitiesS.StaffHome;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -116,5 +118,8 @@ public class PatientHome extends AppCompatActivity {
     }
 
     public void PatientLogout(MenuItem item) {
+        Intent intent = new Intent(PatientHome.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
