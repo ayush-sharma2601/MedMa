@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/helper_schedule"
+        android:title="schedule"
+        android:icon="@drawable/ic_nurse"
+        />
+    <item
+        android:title="notes"
+        android:id="@+id/patient_emergency"
+        android:icon="@drawable/ic_alarm"
+    />
+
+    <item
+        android:title="leave"
+        android:id="@+id/patient_rooms"
+        android:icon="@drawable/ic_bed"
+        />
+</menu>

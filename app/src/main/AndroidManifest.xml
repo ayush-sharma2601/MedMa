@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PatientSide.ActivitiesP.PatientDoctors"></activity>
+        <activity android:name=".StaffSide.ActivitiesS.StaffHome"></activity>
+        <activity android:name=".PatientSide.ActivitiesP.PatientDoctors" />
         <activity android:name=".PatientSide.ActivitiesP.PatientProfile" />
         <activity android:name=".DoctorSide.Activities.PrescriptionActivity" />
         <activity android:name=".DoctorSide.Activities.DoctorRefer" />
