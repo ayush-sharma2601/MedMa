@@ -3,6 +3,7 @@ package com.example.radyapp.Fragment;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.radyapp.Activities.LoginActivity;
 import com.example.radyapp.DoctorSide.Activities.DoctorHome;
+import com.example.radyapp.Models.LoginCall;
 import com.example.radyapp.R;
 import com.example.radyapp.RetrofitClient;
 import com.google.android.material.textfield.TextInputEditText;
@@ -129,24 +132,24 @@ public class SignupFragment extends Fragment {
 
     private void registerUser(String fullName, String address, String phone, String email, String password, String gender, String dob) {
         Map<String,String> body = new HashMap<>();
-        body.put("fullName",fullName);
-        body.put("address",address);
-        body.put("phoneNumber",phone);
-        body.put("email",email);
-        body.put("password",password);
-        body.put("gender",gender);
-        body.put("dateOfBirth",dob);
 
-        Call<String> call = RetrofitClient.getClient().registerUser(body);
-        call.enqueue(new Callback<String>() {
+
+        Call<LoginCall> call = RetrofitClient.getClient().registerUser(fullName,dob,gender,phone,address,"patient",email,password);
+        call.enqueue(new Callback<LoginCall>() {
             @Override
-            public void onResponse(Call<String> call, Response<String> response) {
+            public void onResponse(Call<LoginCall> call, Response<LoginCall> response) {
                 Toast.makeText(getContext(),response.body().toString(),Toast.LENGTH_LONG).show();
-                Intent intent =new Intent(getActivity(), DoctorHome.class);
+                if (response.body().getSuccess()){
+                    Intent intent = new Intent(view.getContext(), LoginActivity.class);
+                    startActivity(intent);
+                }
+                else
+                    Toast.makeText(view.getContext(),"unsuccessful",Toast.LENGTH_LONG).show();
+
             }
 
             @Override
-            public void onFailure(Call<String> call, Throwable t) {
+            public void onFailure(Call<LoginCall> call, Throwable t) {
                 Toast.makeText(getContext(),"Could not register",Toast.LENGTH_LONG).show();
             }
         });
