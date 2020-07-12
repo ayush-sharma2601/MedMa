@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import com.example.radyapp.Activities.LoginActivity;
 import com.example.radyapp.DoctorSide.Activities.DoctorHome;
 import com.example.radyapp.R;
+import com.example.radyapp.StaffSide.ActivitiesS.StaffHome;
 
 public class StaffLoginFragment extends Fragment {
 
@@ -41,7 +42,7 @@ public class StaffLoginFragment extends Fragment {
         loginButtton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mainIntent=new Intent(view.getContext(), DoctorHome.class);
+                Intent mainIntent=new Intent(view.getContext(), StaffHome.class);
                 startActivity(mainIntent);
             }
         });

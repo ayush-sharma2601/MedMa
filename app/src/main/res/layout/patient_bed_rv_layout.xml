@@ -85,7 +85,9 @@
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:id="@+id/manager_bed_call_btn"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/ic_phone"
+        android:tint="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
         android:layout_alignBottom="@id/bed_manager"
         android:layout_toRightOf="@id/txt2"
         android:layout_marginStart="5dp"/>

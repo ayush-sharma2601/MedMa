@@ -76,10 +76,10 @@ public class PatientAppointmentFragment extends Fragment {
     }
 
     private void addData() {
-        for (int i=0;i<2;i++)
-        patientAppointmentModels.add(new PatientApppointmentModel("Dr Bagga","HOD, ENT",true,"Ward E-210","21/20/2001","4:20 PM","Dukh bohot hai :') "));
-        for (int i=0;i<2;i++)
-            patientAppointmentModels.add(new PatientApppointmentModel("Dr Bagga","HOD, ENT",false,"Ward E-210","21/20/2001","4:20 PM","Dukh to hai firbhi hasna padta hai :')"));
+        patientAppointmentModels.add(new PatientApppointmentModel("Dr Sharma","HOD, ENT",true,"Ward E-210","21/20/2001","4:10 PM","cough,cold"));
+        patientAppointmentModels.add(new PatientApppointmentModel("Dr Bagga","HOD, ENT",true,"Ward F-96","21/20/2001","12:20 AM","hair loss"));
+        patientAppointmentModels.add(new PatientApppointmentModel("Dr Bagga","Dental",false,"Ward E-210","21/20/2001","4:20 PM","ToothAche"));
+            patientAppointmentModels.add(new PatientApppointmentModel("Dr Bagga","Gastro",false,"Ward E-210","21/20/2001","4:20 PM","bad stomach"));
     }
 
 

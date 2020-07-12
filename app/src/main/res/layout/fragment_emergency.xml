@@ -29,7 +29,7 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:id="@+id/emergency_qr_code"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/qr_code"
                 android:layout_below="@id/head"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"

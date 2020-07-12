@@ -15,6 +15,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:textAlignment="center"
+        android:paddingHorizontal="40dp"
         android:textColor="@color/colorPrimary"
         android:textSize="17sp"
         android:id="@+id/head"
@@ -32,17 +33,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/head"
-            android:rotation="10"
             android:padding="50dp"
             android:background="#FFE4A1"
             android:id="@+id/helper_notes_rv">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:rotation="-10"
                 android:fontFamily="@font/montserrat_medium"
                 android:textColor="#000"
-                android:text="adasbfbkas"
+                android:text="Check on patient in room E-123 again later\n\nrestock iodine bottles"
                 android:id="@+id/note"/>
         </LinearLayout>
         <EditText
