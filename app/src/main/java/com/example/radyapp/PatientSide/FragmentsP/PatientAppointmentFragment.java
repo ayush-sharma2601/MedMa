@@ -10,10 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.radyapp.DoctorSide.Adapters.AppointmentsAdapter;
-import com.example.radyapp.DoctorSide.ResponseModels.DocAppointmentModel;
 import com.example.radyapp.DoctorSide.ResponseModels.PrescriptionModel;
-import com.example.radyapp.DoctorSide.ResponseModels.TextModel;
 import com.example.radyapp.PatientSide.AdaptersP.PatientAppointmentAdapter;
 import com.example.radyapp.PatientSide.ModelsP.PatientApppointmentModel;
 import com.example.radyapp.R;
@@ -41,13 +38,13 @@ public class PatientAppointmentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view= inflater.inflate(R.layout.fragment_doctor_appointments, container, false);
+        view= inflater.inflate(R.layout.fragment_patient_appointments, container, false);
 
         attachId();
 
         attachLayout();
 
-        initArrarList();
+        initArrayList();
 
         addData();
 
@@ -80,7 +77,7 @@ public class PatientAppointmentFragment extends Fragment {
         appointmentsRv.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL,false));
     }
 
-    private void initArrarList() {
+    private void initArrayList() {
 
         patientAppointmentModels=new ArrayList<>(3);
     }
