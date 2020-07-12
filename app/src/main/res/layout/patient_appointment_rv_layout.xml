@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/ubuntu_bold"
         android:text="date:"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="10dp"
         android:textSize="11sp"
         android:layout_below="@id/doctor_dept_appointment"
         android:id="@+id/appointment_datetv"
