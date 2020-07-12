@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="15dp"
+    android:padding="15dp"
+    android:background="@drawable/notice_back"
+    android:layout_marginTop="6dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/bed_class"
+        android:fontFamily="@font/ubuntu_medium"
+        android:textSize="17sp"
+        android:text="Private Beds"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="occupied:"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/bed_class"
+        android:id="@+id/beds_occupiedtv"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="vacant:"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_marginTop="3dp"
+        android:textSize="16sp"
+        android:layout_below="@id/beds_occupiedtv"
+        android:id="@+id/beds_vacanttv"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@id/beds_occupiedtv"
+        android:layout_alignBottom="@id/beds_occupiedtv"
+        android:id="@+id/beds_occupied"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_toRightOf="@id/beds_vacanttv"
+        android:layout_alignBottom="@id/beds_vacanttv"
+        android:id="@+id/beds_vacant"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/beds_vacanttv"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Call"
+        android:id="@+id/txt"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/beds_vacanttv"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Rishabh Singh"
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@id/txt"
+        android:id="@+id/bed_manager"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/beds_vacanttv"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="for queries."
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@id/bed_manager"
+        android:id="@+id/txt2"
+        android:layout_marginTop="5dp"/>
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/manager_bed_call_btn"
+        android:background="@color/colorPrimary"
+        android:layout_alignBottom="@id/bed_manager"
+        android:layout_toRightOf="@id/txt2"
+        android:layout_marginStart="5dp"/>
+
+
+
+</RelativeLayout>

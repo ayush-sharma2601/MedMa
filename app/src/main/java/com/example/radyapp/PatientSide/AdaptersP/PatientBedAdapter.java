@@ -20,7 +20,7 @@ public class PatientBedAdapter extends RecyclerView.Adapter<PatientBedAdapter.Pa
     @NonNull
     @Override
     public PatientBedAdapterRvRH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new PatientBedAdapterRvRH(LayoutInflater.from(parent.getContext()).inflate(R.layout.,parent,false));
+        return new PatientBedAdapterRvRH(LayoutInflater.from(parent.getContext()).inflate(R.layout.patient_appointment_rv_layout,parent,false));
     }
 
     @Override

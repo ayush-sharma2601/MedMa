@@ -31,10 +31,10 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_medium"
         android:text="HOD, ENT"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="5dp"
         android:textSize="11sp"
         android:layout_below="@id/doctor_name"
-        android:id="@+id/doctor_dept"
+        android:id="@+id/doctor_dept_appointment"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
         android:text="date:"
         android:layout_marginTop="2dp"
         android:textSize="11sp"
-        android:layout_below="@id/doctor_dept"
+        android:layout_below="@id/doctor_dept_appointment"
         android:id="@+id/appointment_datetv"
         />
     <TextView
