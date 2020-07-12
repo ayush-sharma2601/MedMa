@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,7 +18,15 @@ import com.example.radyapp.Activities.LoginActivity;
 import com.example.radyapp.DoctorSide.Activities.DoctorHome;
 import com.example.radyapp.PatientSide.ActivitiesP.PatientHome;
 import com.example.radyapp.R;
+import com.example.radyapp.RetrofitClient;
 import com.example.radyapp.StaffSide.ActivitiesS.StaffHome;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class PatientLoginFragment extends Fragment {
 
@@ -64,13 +73,14 @@ public class PatientLoginFragment extends Fragment {
 //                    Intent mainIntent = new Intent(view.getContext(), DoctorHome.class);
 //                    startActivity(mainIntent);
 
+                    loginUser(patientUsername.getText().toString(),patientPassword.getText().toString(),"patient");
                     Intent mainIntent = new Intent(view.getContext(), StaffHome.class);
                     startActivity(mainIntent);
                 }
             }
         });
 
-        registerButton.setOnClickListener(new View.OnClickListener() {
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 LoginActivity.getInstance().loadFragment(new SignupFragment());
@@ -78,6 +88,30 @@ public class PatientLoginFragment extends Fragment {
         });
 
         return view ;
+    }
+
+    private void loginUser(String username, String password,String role) {
+        Map<String,String> body = new HashMap<>();
+        body.put("email",username);
+        body.put("password",password);
+
+        Call<String> call = RetrofitClient.getClient().registerUser(body);
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+
+
+                //Idhar kya krna hai?
+                Toast.makeText(getContext(),response.body().toString(),Toast.LENGTH_LONG).show();
+                Intent intent =new Intent(getActivity(), DoctorHome.class);
+
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Toast.makeText(getContext(),"Could not register",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void attachId() {

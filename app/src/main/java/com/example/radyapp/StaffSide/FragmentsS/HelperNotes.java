@@ -47,6 +47,7 @@ public class HelperNotes extends Fragment {
         attachAdapter();
 
         refreshAdapter();
+
         return view;
     }
 

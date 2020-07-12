@@ -57,7 +57,6 @@ public class HelperNotices extends AppCompatActivity {
     }
 
     private void refreshAdapter() {
-
         noticeAdappter.notifyDataSetChanged();
     }
 
@@ -66,7 +65,6 @@ public class HelperNotices extends AppCompatActivity {
     }
 
     private void initArrarList() {
-
         notices=new ArrayList<>(3);
     }
 
