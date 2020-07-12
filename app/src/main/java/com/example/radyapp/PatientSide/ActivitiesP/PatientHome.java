@@ -101,4 +101,13 @@ public class PatientHome extends AppCompatActivity {
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
+
+    public void PatientProfile(MenuItem item) {
+    }
+
+    public void DoctorList(MenuItem item) {
+    }
+
+    public void PatientLogout(MenuItem item) {
+    }
 }
