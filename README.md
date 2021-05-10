@@ -20,5 +20,5 @@ MedMa is a **Hospital Management** app which will help hospitals save time and o
 ## Team Members
 * [Ayush Sharma](https://github.com/ayush-sharma2601)
 * [Rishabh Singh](https://github.com/rishabh-hub)
-* Divyam Agarwal
+* [Divyam Agarwal](https://github.com/div-yam)
 * [Yatik Budhrani](https://github.com/yatikbudhrani)
