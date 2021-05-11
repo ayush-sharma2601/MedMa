@@ -10,9 +10,9 @@ MedMa is a **Hospital Management** app which will help hospitals save time and o
 <br />
 
   <p float="left">
-  <img src="https://github.com/ayush-sharma2601/rady-app/blob/master/WhatsApp%20Image%202021-05-11%20at%2021.43.56.jpeg" width="300"hspace="10"  />
-  <img src="https://github.com/ayush-sharma2601/rady-app/blob/master/WhatsApp%20Image%202021-05-11%20at%2021.43.56%20(1).jpeg" width="300" hspace="10" />
-  <img src="https://github.com/ayush-sharma2601/rady-app/blob/master/WhatsApp%20Image%202021-05-11%20at%2021.43.56%20(2).jpeg" width="300" /> 
+  <img src="https://github.com/ayush-sharma2601/rady-app/blob/master/WhatsApp%20Image%202021-05-11%20at%2021.43.56.jpeg" width="250"hspace="10"  />
+  <img src="https://github.com/ayush-sharma2601/rady-app/blob/master/WhatsApp%20Image%202021-05-11%20at%2021.43.56%20(1).jpeg" width="250" hspace="10" />
+  <img src="https://github.com/ayush-sharma2601/rady-app/blob/master/WhatsApp%20Image%202021-05-11%20at%2021.43.56%20(2).jpeg" width="250" /> 
   <img src="https://github.com/ayush-sharma2601/rady-app/blob/master/WhatsApp%20Image%202021-05-11%20at%2021.43.56%20(3).jpeg" width="300"hspace="10"  />
   <img src="https://github.com/ayush-sharma2601/rady-app/blob/master/WhatsApp%20Image%202021-05-11%20at%2021.43.56%20(4).jpeg" width="300"hspace="10"  />
   <img src="https://github.com/ayush-sharma2601/rady-app/blob/master/WhatsApp%20Image%202021-05-11%20at%2021.43.56%20(5).jpeg" width="300" hspace="10" />
